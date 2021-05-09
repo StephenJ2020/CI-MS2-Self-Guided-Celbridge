@@ -36,18 +36,21 @@ The user is looking.....
  
   - ### First Time Visitor Goals
  
-   1. As a First Time Visitor, I want to easily 
-   2. As a First Time Visitor, I want to easily 
-   3. As a First Time Visitor, I want to be able to navigate the site easily with the minimum number of clicks to get to the desired information.
-   4. As a First Time Visitor, I want to 
-   5. As a First Time Visitor, I want to 
-   6. As a First Time Visitor, I want a site that 
+   1. As a First Time Visitor, I want to be able to navigate the site easily with the minimum number of clicks to get to the desired information.  
+   2. As a First Time Visitor, I want to easily select from which end of the route I want to start the walking tour.  
+   3. As a First Time Visitor, I want to easily see an overview of the whole route on a map that is easy to understand.  
+   4. As a First Time Visitor, I want to be able to see information about each location without having to leave the map.  
+   5. As a First Time Visitor, I want a map that is mobile enabled so that it will show my location if I'm using my mobile or tablet to follow the route.  
+   6. As a First Time Visitor, I want a site that gives me the option to view a "text" based version of the details without having to use the map.  
+   6. As a First Time Visitor, I want a site that can play the relevant part of the Abarta Audio Guide at each location on my chosen route.  
+   6. As a First Time Visitor, I want a site that allows me to contact the site owner for any additional information I would like about the Self-Guided Walking Tour.  
+ 
  
    - ### Returning & Frequent Visitor Goals
  
-   1. As a Returning Visitor, I want to be able to 
-   2. As a Returning Visitor, I want to be able to 
-   3. As a Frequent User, I want to be able to   
+   1. As a Returning Visitor, I want to be able to revist details of individual locations without having to click through each location in sequence.
+   2. As a Returning Visitor, I want to be able to be able to contact the site owner to arrange a Guided Group Tour. 
+   3. As a Frequent User, I want to be able to follow updates on Social Media so that it is quick and easy for me to share them with my family and friends. 
  
 # Functional Specification   
  
