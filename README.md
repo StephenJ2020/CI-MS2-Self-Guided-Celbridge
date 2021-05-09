@@ -72,17 +72,20 @@ The user is looking a site than can primarily function as a navigation tool for 
 ## Future feature requirements:   
 * Additional JavaScript functionality will be added that will extract the relevant part of the [Abarta Audio Guide](https://www.abartaheritage.ie/castletown-house-and-celbridge-heritage-trail-audio-guide/) so that the user can chose to play the acompaning audio clip for their current location.  
 * Additional JavaScript functionality will be added that will allow the user even greater control of where they start from and the route that they chose to follow.  
- 
-## Content Requirements:  
-*  
-*  
-*  
- 
+  
+  
 # Structure  
- 
+  
 ***index.html***  
- 
- 
+ * Will contain a horizontal fixed navbar.  
+ * Will be divided into four clearly defined sections.  
+ * Section one will act as a landing page with two buttons to allow the user to choose their starting point for the self-guided walking tour.  
+ * Section two will contain an interactive map with a secondary vertical navbar.
+ * Section three will generate an HTML text based version of the tour details based on the users chosen starting point.  
+ * Section four will contain a contact form and a footer with social media links.
+ * Using JavaScript, only one section of the page will be visible at any time.  
+      
+     
 # wireframes
 [Desktop](https://github.com/StephenJ2020/CI-MS2-Self-Guided-Celbridge/blob/2bcf32e87b2a4d8d0205e465e765f10c6597d36a/assets/images/rm-desktop-wireframe.png)  
 ![Desktop](./assets/images/rm-desktop-wireframe-tbn.png)     
