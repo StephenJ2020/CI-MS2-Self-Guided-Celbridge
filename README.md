@@ -136,6 +136,8 @@ A strong but earthy green, clean & crisp white and dark grey, with a medium blue
  
  
 # Credits  
+
+Favicon: Was created using a [Font Awesome Icon Converter](https://gauger.io/fonticon/) by Paul Ferrett which I found via [Stack Overflow](https://stackoverflow.com/questions/18156240/use-font-awesome-icon-as-favicon)
  
  
  
