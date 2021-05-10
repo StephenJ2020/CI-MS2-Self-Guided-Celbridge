@@ -96,8 +96,21 @@ The user is looking a site than can primarily function as a navigation tool for 
    
   
          
-# Visual Design  
-  
+# Visual Design   
+
+With the help of [Colour Mind](http://colormind.io/) I choose the following colour palatte for my site:  
+
+![Colour Palatte](./assets/images/rm-colour-palatte.png)
+   
+A strong but earthy green, clean & crisp white and dark grey, with a medium blue and mustard for a pop of colour.
+
+- ![#005332](https://placehold.it/20/005332/005332) `#005332`  
+- ![#B7990D](https://placehold.it/20/B7990D/B7990D) `#B7990D`    
+- ![#007EA7](https://placehold.it/20/007EA7/007EA7) `#007EA7`    
+- ![#F1F2EB](https://placehold.it/20/F1F2EB/F1F2EB) `#F1F2EB`    
+- ![#272D2D](https://placehold.it/20/272D2D/272D2D) `#272D2D`  
+ 
+    
   
     
   
