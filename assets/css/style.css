@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
 
 /* ********************************************************* Navbar */
 
@@ -26,5 +28,10 @@ height:100%;
 background-repeat:no-repeat;
 background-size:cover;
 background-size: cover;
-background-position: center center;
+background-position: center auto;
+}
+
+.fitImage{
+    width: 100%;
+    box-sizing:border-box;
 }
