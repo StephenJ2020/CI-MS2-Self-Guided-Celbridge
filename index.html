@@ -16,7 +16,7 @@
 </head>
 <body>
     <header> <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark"> <!-- Code Snippet adapted from https://getbootstrap.com/docs/5.0/components/navbar/ -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-container"> <!-- Code Snippet adapted from https://getbootstrap.com/docs/5.0/components/navbar/ -->
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><i class="fas fa-shoe-prints"></i> Self-Guided Celbridge</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,18 +42,42 @@
         </nav>
     </header>
     <section> <!-- Bootstrap Carousel with 3 scrolling Hero Images -->
-        1
+        <div class="hero-carousel">
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="./assets/images/s1-castletown-house-wide3.png" class="d-block w-100 h-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="./assets/images/s1-castletown-avenue.png" class="d-block w-100 h-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="./assets/images/s1-oughterard.png" class="d-block w-100 h-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </section>
     <main> <!-- Leaftlet JS Map -->
-        2
+        
     </main>
     <section> <!-- Text Version of Tour details -->
-        3
+        <div class="col-12 container-fluid">
+           
+        </div>
     </section>
     <section> <!-- Contact Form -->
-        4
+        
         <footer> <!-- Social Media Links -->
-            5
+            
         </footer>
     </section>
 

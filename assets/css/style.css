@@ -1,0 +1,30 @@
+
+
+/* ********************************************************* Navbar */
+
+.nav-container{
+    color: #F1F2EB;
+    position: fixed;
+    background-color: #005332!important;
+}
+
+.hero-carousel{
+    height: 100vh;
+    width: 100%;
+    background-color: #B7990D;
+}
+
+.carousel, .item, .active{  /* This codepen code snippet helped me understand which Bootstrap classes I needed to override: https://codepen.io/kchez/pen/YwedPb */
+height:100%;
+}
+
+.carousel-inner{  /* This codepen code snippet helped me understand which Bootstrap classes I needed to override: https://codepen.io/kchez/pen/YwedPb */
+height:100%;
+}
+
+.carousel .carousel-inner{  /* This codepen code snippet helped me understand which Bootstrap classes I needed to override: https://codepen.io/kchez/pen/YwedPb */
+background-repeat:no-repeat;
+background-size:cover;
+background-size: cover;
+background-position: center center;
+}

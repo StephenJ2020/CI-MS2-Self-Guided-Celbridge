@@ -129,6 +129,9 @@ A strong but earthy green, clean & crisp white and dark grey, with a medium blue
 ### Frameworks, Libraries & Programs Used
  
    
+
+This [codepen code](https://codepen.io/kchez/pen/YwedPb) snippet helped me understand which Bootstrap classes I needed to override in order to have the Carousel responsively occupy the full viewport height of the device.
+
 # TESTING      
   
     
@@ -138,6 +141,9 @@ A strong but earthy green, clean & crisp white and dark grey, with a medium blue
 # Credits  
 
 Favicon: Was created using a [Font Awesome Icon Converter](https://gauger.io/fonticon/) by Paul Ferrett which I found via [Stack Overflow](https://stackoverflow.com/questions/18156240/use-font-awesome-icon-as-favicon)
+
+##Images  
+Conolly's Folly is by [Luke O'Faolain](https://www.google.com/maps/uv?pb=!1s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec!3m1!7e115!4s%2Fmaps%2Fplace%2Fconolly%27s%2Bfolly%2F%4053.3698169%2C-6.5604273%2C3a%2C75y%2C139.47h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sEDcDhACe9usFaBTLud5v6A*212e0*214m2*213m1*211s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec%3Fsa%3DX!5sconolly%27s%20folly%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipO2TZ7AW4eKJulp-UsGIKzjdAgLgLHC68MBefP3&hl=en&sa=X&ved=2ahUKEwi0373_z8HwAhWiunEKHTWqD8oQpx8wInoECDQQCA)  
  
  
  
