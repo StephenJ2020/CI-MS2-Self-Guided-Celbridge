@@ -1,8 +1,11 @@
-![Self-Guided Celbridge logo]()
- 
-# Project Description   
-**Code Institute: Interactive Frontend Development**  
- 
+# ***[Self-Guided Celbridge](https://stephenj2020.github.io/CI-MS2-Self-Guided-Celbridge/)***  
+(Please note the site is still under construction but you are welcome to follow my progress!)
+   
+ ![Self-Guided Celbridge logo]()  
+  
+# Project Description    
+**Code Institute: Interactive Frontend Development**   
+  
 The Milestone 2 project assignment is to build an interactive front-end site. The site should respond to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals.   
 I have the option to choose from one of the following three scenarios or to come up with my own idea:    
   * Build a memory game  
@@ -136,6 +139,48 @@ This [codepen code](https://codepen.io/kchez/pen/YwedPb) snippet helped me under
   
     
 # Deployment  
+
+This project was deployed to GitHub Pages following these steps:
+
+1. Login to GitHub  
+2. Locate the following GitHub Repository name in the Search Bar: StephenJ2020/CI-MS2-Self-Guided-Celbridge  
+3. Click into the repository to view more details
+4. Click on Settings, located on the menu tab just below the repository name  
+5. On the Menu options on the left select the second last option "Pages"
+6. Under Source, select Master in the dropdown menu   
+7. Select /(root) in the tab that is next to Branch selector     
+8. Click Save and page will automatically refresh
+9. You will now see a link to the deployed website   
+10. To view the deployed website [click here!](https://stephenj2020.github.io/CI-MS1-IrishSpiritTours/index.html)  
+
+## Forking the GitHub Repository
+
+By forking the GitHub Repository you make a copy of the original repository on your own GitHub account to view and/or make changes without affecting the original repository by following these simple steps:
+
+1. Log in to GitHub and locate the [StephenJ2020/CI-MS2-Self-Guided-Celbridge](https://github.com/StephenJ2020/CI-MS2-Self-Guided-Celbridge)
+2. Near the top of the Repository, on the right-hand side of the screen, locate the "Fork" button.
+3. Click this button and you should now have a copy of the original repository in your GitHub account.
+  
+## Making a Local Clone
+
+1. Log in to GitHub and locate the [StephenJ2020/CI-MS2-Self-Guided-Celbridge](https://github.com/StephenJ2020/CI-MS2-Self-Guided-Celbridge)
+2. Under the repository name, click "Clone or download" or you may see a button saying "Code" with a download arrow.
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+```
+$ git clone https://github.com/StephenJ2020/CI-MS2-Self-Guided-Celbridge
+```
+7. Press Enter. Your local clone will be created.
+```
+$ git clone https://github.com/StephenJ2020/CI-MS2-Self-Guided-Celbridge   
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+``` 
  
  
 # Credits  
