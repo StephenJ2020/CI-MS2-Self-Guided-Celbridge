@@ -131,9 +131,17 @@ A strong but earthy green, clean & crisp white and dark grey, with a medium blue
   
 ### Frameworks, Libraries & Programs Used
  
-   
-
+#Development Issues:    
+  
 This [codepen code](https://codepen.io/kchez/pen/YwedPb) snippet helped me understand which Bootstrap classes I needed to override in order to have the Carousel responsively occupy the full viewport height of the device.
+    
+Bug fix during Development of Section 4 - Contact Form:  
+ * Syntax error, I typed d.none rather than d-none on the second immage that I loaded for display on desktops.
+ * I also assigned the class of container to the first div but it should have been container-fluid and this caused section 4 be less than full viewport width.  
+ * In my css I gave my class .contact-image-container a width of 100% but this caused a conflict with the container-fluid class resulting in unwanted padding so I removed this width attribute completely.  
+ * Plus I needed to add some css to size the contact using ID #contact-form  
+
+  
 
 # TESTING      
   
