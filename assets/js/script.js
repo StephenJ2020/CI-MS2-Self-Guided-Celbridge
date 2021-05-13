@@ -9,4 +9,8 @@ let map = L.map("map", {
     zoom: 15
 });
 
+map.locate({
+     watch: true,
+     setView: true
+});
 
