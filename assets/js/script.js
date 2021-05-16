@@ -5,8 +5,9 @@ const locations = [
         name: "Castletown House",
         lat: "53.349016",
         lng: "-6.530198",
-        image: "assets/images/",
-        description: ""
+        image: "./assets/images/s2-castletown-house.png",
+        alt: "Aerial image of Castletown House & Parklands",
+        description: "<p>Castletown is Ireland's finest eighteenth-century country house, built from 1722 for Speaker William Conolly and his wife Katherine. The house was probably designed by Alessandro Galilei, the Italian architect, and Edward Lovett Pearce. Lady Louisa Conolly (1743-1821), wife of Tom Conolly, grand-nephew of William, came to the house in 1759. She loved Castletown.</p>"
     },
     {
         name: "Batty Langley Lodge 1785",
@@ -217,7 +218,7 @@ let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/til
 let map = L.map("map", {
     layers: [tiles],
     center: [53.34, -6.54],
-    zoom: 16
+    zoom: 15
 });
 
 // User's live location on mobile devices
@@ -229,5 +230,11 @@ map.locate({
 // Place markers
 locations.forEach(location => {
     let marker = L.marker([location.lat, location.lng]).addTo(map);
+    marker.bindPopup(`<div class="location-item"><h5>${location.name}</h5>
+    <img class="pinPadding" src="${location.image}" alt="${location.alt}">
+    </div>`);
     locationsDiv.innerHTML += `<div class="location-item"><h4>${location.name}</h4></div>`;
 });
+
+
+
