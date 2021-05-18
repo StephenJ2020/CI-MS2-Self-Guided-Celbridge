@@ -55,7 +55,7 @@ The user is looking a site than can primarily function as a navigation tool for 
  1. As a Returning Visitor, I want to be able to revist details of individual locations without having to click through each location in sequence.  
  2. As a Returning Visitor, I want to be able to be able to contact the site owner to arrange a Guided Group Tour.   
  3. As a Frequent User, I want to be able to follow updates on Social Media so that it is quick and easy for me to share them with my family and friends.   
-   
+    
 # Functional Specification   
  
 ## Current feature requirements:      
@@ -196,7 +196,21 @@ $ git clone https://github.com/StephenJ2020/CI-MS2-Self-Guided-Celbridge
 Favicon: Was created using a [Font Awesome Icon Converter](https://gauger.io/fonticon/) by Paul Ferrett which I found via [Stack Overflow](https://stackoverflow.com/questions/18156240/use-font-awesome-icon-as-favicon)
 
 ##Images  
-Conolly's Folly is by [Luke O'Faolain](https://www.google.com/maps/uv?pb=!1s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec!3m1!7e115!4s%2Fmaps%2Fplace%2Fconolly%27s%2Bfolly%2F%4053.3698169%2C-6.5604273%2C3a%2C75y%2C139.47h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sEDcDhACe9usFaBTLud5v6A*212e0*214m2*213m1*211s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec%3Fsa%3DX!5sconolly%27s%20folly%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipO2TZ7AW4eKJulp-UsGIKzjdAgLgLHC68MBefP3&hl=en&sa=X&ved=2ahUKEwi0373_z8HwAhWiunEKHTWqD8oQpx8wInoECDQQCA)  
+Conolly's Folly is by - [Luke O'Faolain](https://www.google.com/maps/uv?pb=!1s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec!3m1!7e115!4s%2Fmaps%2Fplace%2Fconolly%27s%2Bfolly%2F%4053.3698169%2C-6.5604273%2C3a%2C75y%2C139.47h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sEDcDhACe9usFaBTLud5v6A*212e0*214m2*213m1*211s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec%3Fsa%3DX!5sconolly%27s%20folly%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipO2TZ7AW4eKJulp-UsGIKzjdAgLgLHC68MBefP3&hl=en&sa=X&ved=2ahUKEwi0373_z8HwAhWiunEKHTWqD8oQpx8wInoECDQQCA)  
+Castletown Gate Lodge - [Dream Ireland](https://www.dreamireland.com/site/Round_House_at_Castletown_Celbridge.21589.html)  
+Castletown Round House - [Irish Landmark Trust](https://www.irishlandmark.com/property/castletown-round-house/)  
+Castletown House & Lake - [Unironedman](https://unironedman.com/2015/10/25/the-inaugural-park-run-at-castletown-house/)  
+Mrs Siddons Temple - [Into Kildare](https://intokildare.ie/listings/castletown-house/)  
+Batty Langley Lodge - [Irish Landmark Trust](https://www.irishlandmark.com/property/batty-langley-lodge/)  
+St. Wolstan's Abbey - [Flickr](https://www.flickr.com/photos/joehoughton/33556874675/)  
+Ice-House - [30 Points of Interest - Celbridge](http://www.discovercelbridge.com/wp-content/uploads/2017/02/Discover-Celbridge-Walking-Guide.pdf)  
+Victorian House - [Google Maps Street view](https://www.google.ie/maps/place/MAXIMALL+PHONE+SHOP/@53.3385458,-6.539578,3a,75y,283.06h,121.33t/data=!3m6!1e1!3m4!1s8xjZxZ5h2sUtWQNo1SnxiA!2e0!7i16384!8i8192!4m12!1m6!3m5!1s0x486771a9b090abd5:0x2d63deb9e9b4da9c!2sComplete+Leisure+Supplies+Ltd,+Arctic+Spas+Ireland!8m2!3d53.3436111!4d-6.5394444!3m4!1s0x48677181349df4dd:0x33bb8b96a40d8cb1!8m2!3d53.3397646!4d-6.5387911?hl=en&authuser=0)  
+George Finey's House - [Google Maps Street view](https://www.google.ie/maps/place/MAXIMALL+PHONE+SHOP/@53.3385458,-6.539578,3a,75y,283.06h,121.33t/data=!3m6!1e1!3m4!1s8xjZxZ5h2sUtWQNo1SnxiA!2e0!7i16384!8i8192!4m12!1m6!3m5!1s0x486771a9b090abd5:0x2d63deb9e9b4da9c!2sComplete+Leisure+Supplies+Ltd,+Arctic+Spas+Ireland!8m2!3d53.3436111!4d-6.5394444!3m4!1s0x48677181349df4dd:0x33bb8b96a40d8cb1!8m2!3d53.3397646!4d-6.5387911?hl=en&authuser=0)  
+St. Patrick's Church - [Google Maps Street view](https://www.google.ie/maps/place/MAXIMALL+PHONE+SHOP/@53.3385458,-6.539578,3a,75y,283.06h,121.33t/data=!3m6!1e1!3m4!1s8xjZxZ5h2sUtWQNo1SnxiA!2e0!7i16384!8i8192!4m12!1m6!3m5!1s0x486771a9b090abd5:0x2d63deb9e9b4da9c!2sComplete+Leisure+Supplies+Ltd,+Arctic+Spas+Ireland!8m2!3d53.3436111!4d-6.5394444!3m4!1s0x48677181349df4dd:0x33bb8b96a40d8cb1!8m2!3d53.3397646!4d-6.5387911?hl=en&authuser=0)  
+Gogarty's Shop - [Google Maps Street view](https://www.google.ie/maps/place/MAXIMALL+PHONE+SHOP/@53.3385458,-6.539578,3a,75y,283.06h,121.33t/data=!3m6!1e1!3m4!1s8xjZxZ5h2sUtWQNo1SnxiA!2e0!7i16384!8i8192!4m12!1m6!3m5!1s0x486771a9b090abd5:0x2d63deb9e9b4da9c!2sComplete+Leisure+Supplies+Ltd,+Arctic+Spas+Ireland!8m2!3d53.3436111!4d-6.5394444!3m4!1s0x48677181349df4dd:0x33bb8b96a40d8cb1!8m2!3d53.3397646!4d-6.5387911?hl=en&authuser=0)  
+The Mill - [Kildare.ie](https://kildare.ie/tourism/typedetails.asp?EventID=22222)  
+
+ 
  
  
  
