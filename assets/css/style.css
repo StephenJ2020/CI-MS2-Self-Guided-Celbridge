@@ -52,14 +52,24 @@ background-position: center center;
 }
 
 #map {
-    height: 95vh;
+    height: 93.5vh;
     width: 100%;
+    margin: 3px;
+}
+
+#menu{
+    z-index: 1100;
+    /* background-color: #005332; */
+    width: fit-content;
+    position: absolute;
+    bottom: -580px;
+    left: 10px;
 }
 
 .location-item {
     padding: 4em 2em 0em 2em;
     position: relative;
-    color: #007ea7;
+    color: #272D2D;
     border-left: 1px solid;
 }
 
@@ -128,17 +138,16 @@ background-position: center center;
 
 @media (max-width: 991px) {
     #locations {
-        height: 92%;
+        height: 100%;
         width: 0;
         position: fixed;
         z-index: 1100;
-        top: 0;
+        bottom: 0;
         left: 0;
-        background-color: rgba(183, 153, 13, 0.8);
+        background-color: rgba(183, 153, 13, 0.9);
         overflow-x: hidden;
         overflow-y: scroll;
-        padding-top: 2%;
-        margin-top: 15%;
+        padding-top: 60px;
         transition: 0.5s;
     }
 }

@@ -332,7 +332,7 @@ locations.forEach(location => {
 let menu = document.getElementById("menu");
 menu.addEventListener("click", function (e) {
     e.stopPropagation();
-    locationsDiv.style.width = "75vw";
+    locationsDiv.style.width = "65vw";
 });
 
 window.addEventListener("click", function () {
