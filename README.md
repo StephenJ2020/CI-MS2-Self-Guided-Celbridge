@@ -141,6 +141,23 @@ Bug fix during Development of Section 4 - Contact Form:
  * In my css I gave my class .contact-image-container a width of 100% but this caused a conflict with the container-fluid class resulting in unwanted padding so I removed this width attribute completely.  
  * Plus I needed to add some css to size the contact using ID #contact-form  
 
+ After I merged the mapMarkers branch onto the Master branch I used JShint.com to validate my script.js file and got the following four warnings:  
+ * 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).  
+ * 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).  
+ * 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').  
+ * 'template literal syntax' is only available in ES6 (use 'esversion: 6').  
+ After searching on Slack I found a post by Claire lemonnier from the 27Apr 2021 with a similar issue and a response by Stuart Saint advising to add the following two lines to the top of the JS file:   
+ * /* jshint esversion: 6 */  
+ * /* globals $:false */  
+ On further research there were many similar posts and the general consensus was to just include the first line of this: /* jshint esversion: 6 */  
+ Having placed this in my script.js file and then re-validating my code in JShint the warnings disappeared.  
+  
+z-indexing:  
+The leaflet js map has a number of layers with a z-index, the highest being the zoom button with a z-index of 1000. 
+For my Side Navbar to slide out over the map it needs a z-index higher than the map so I have set it to 1100.
+But to deal with the change in the height of the main navbar on different mobile devices I want the side navbar to sit under the main navbar so that there is no gap between the two on certain mobile devices.  
+Therefore I have given the main navbar a z-index of 1200 to achieve this.  
+
   
 
 # TESTING      

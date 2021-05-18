@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 
 // variable = Array of objects with details of each map location
 const locations = [
@@ -327,5 +328,15 @@ locations.forEach(location => {
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
 });
 
+// Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+let menu = document.getElementById("menu");
+menu.addEventListener("click", function (e) {
+    e.stopPropagation();
+    locationsDiv.style.width = "75vw";
+});
+
+window.addEventListener("click", function () {
+    locationsDiv.style.width = "0";
+});
 
 

@@ -8,16 +8,13 @@
     box-sizing: border-box;
 }
 
-/*html {
-  scroll-behavior: smooth;
-} */
-
 /* ********************************************************* HEADER - Navbar */
 
 .nav-container{
     color: #F1F2EB;
     position: fixed;
     background-color: #005332!important;
+    z-index: 1200;
 }
 
 
@@ -59,6 +56,36 @@ background-position: center center;
     width: 100%;
 }
 
+.location-item {
+    padding: 4em 2em 0em 2em;
+    position: relative;
+    color: #007ea7;
+    border-left: 1px solid;
+}
+
+.location-item::before {
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 0px;
+    margin: 0;
+}
+
+.location-item::after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: '';
+    background: #B7990D;
+}
+
 /* ********************************************************* SECTION THREE - Text View */
 
 .text-container{
@@ -98,3 +125,26 @@ background-position: center center;
 
 
 /* ********************************************************* MEDIA QUERIES */
+
+@media (max-width: 991px) {
+    #locations {
+        height: 92%;
+        width: 0;
+        position: fixed;
+        z-index: 1100;
+        top: 0;
+        left: 0;
+        background-color: rgba(183, 153, 13, 0.8);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-top: 2%;
+        margin-top: 15%;
+        transition: 0.5s;
+    }
+}
+
+@media (min-width: 992px) {
+    #menu {
+        display: none;
+    }
+}
