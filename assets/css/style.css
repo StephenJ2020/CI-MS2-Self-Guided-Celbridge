@@ -66,11 +66,43 @@ background-position: center center;
     left: 10px;
 }
 
+.start h4{
+    width: fit-content;
+    position: relative;
+    padding: 1em 1em 2em 1em;
+    color: #272D2D;
+}
+
+.start h4::before {
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 0px;
+    margin: 0;
+}
+
+/*.start h4::after {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 2.4em;
+    left: -11px;
+    background-color: #F1F2EB;
+    border: 3px solid #007EA7;
+    border-radius: 10px;
+    content: '';
+}*/
+
 .location-item {
-    padding: 4em 2em 0em 2em;
+    padding: 2em 2em 0em 2em;
+    margin-left: 1.5em;
     position: relative;
     color: #272D2D;
-    border-left: 1px solid;
+    border-left: 3px solid #007EA7;
 }
 
 .location-item::before {
@@ -78,22 +110,27 @@ background-position: center center;
     left: 2.5em;
     top: 3em;
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.8em;
     padding: 0px;
     margin: 0;
 }
 
 .location-item::after {
-    width: 12px;
-    height: 12px;
-    display: block;
-    top: 2.4em;
+    width: 20px;
+    height: 20px;
+    /*display: block;*/
     position: absolute;
-    left: -6px;
-    border-radius: 12px;
+    top: 2.4em;
+    left: -11px;
+    background-color: #F1F2EB;
+    border: 3px solid #007EA7;
+    border-radius: 10px;
     content: '';
-    background: #B7990D;
+}
+
+h5{
+    margin-bottom: 0;
 }
 
 /* ********************************************************* SECTION THREE - Text View */

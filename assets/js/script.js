@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 
-// variable = Array of objects with details of each map location
+// variable = Array of objects with details of each map location https://www.w3schools.com/js/js_objects.asp
 const locations = [
     {
         name: "Castletown House",
@@ -315,6 +315,9 @@ map.locate({
      setView: true
 });
 
+let startHeader = document.getElementById("start");
+startHeader.innerHTML = `<h4>START</h4>`;
+
 // Place markers
 locations.forEach(location => {
     let marker = L.marker([location.lat, location.lng]).addTo(map);
@@ -332,8 +335,9 @@ locations.forEach(location => {
 let menu = document.getElementById("menu");
 menu.addEventListener("click", function (e) {
     e.stopPropagation();
-    locationsDiv.style.width = "65vw";
+    locationsDiv.style.width = "70vw";
 });
+
 
 window.addEventListener("click", function () {
     locationsDiv.style.width = "0";
