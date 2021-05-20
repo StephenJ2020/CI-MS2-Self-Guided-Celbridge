@@ -1,5 +1,6 @@
+/* jshint esversion: 6 */
 
-// variable = Array of objects with details of each map location
+// variable = Array of objects with details of each map location https://www.w3schools.com/js/js_objects.asp
 const locations = [
     {
         name: "Castletown House",
@@ -314,7 +315,11 @@ map.locate({
      setView: true
 });
 
+//let startHeader = document.getElementById("start");
+//startHeader.innerHTML = `<h4>START</h4>`;
+
 // Place markers
+locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
 locations.forEach(location => {
     let marker = L.marker([location.lat, location.lng]).addTo(map);
     marker.bindPopup(`<div class="location-item"><h5>${location.name}</h5>
@@ -324,8 +329,20 @@ locations.forEach(location => {
     <p>${location.descriptionThree}</p>
     <p>${location.descriptionFour}</p>
     </div>`);
+    
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
 });
 
+// Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+let menu = document.getElementById("menu");
+menu.addEventListener("click", function (e) {
+    e.stopPropagation();
+    locationsDiv.style.width = "70vw";
+});
+
+
+window.addEventListener("click", function () {
+    locationsDiv.style.width = "0";
+});
 
 

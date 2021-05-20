@@ -8,16 +8,13 @@
     box-sizing: border-box;
 }
 
-/*html {
-  scroll-behavior: smooth;
-} */
-
 /* ********************************************************* HEADER - Navbar */
 
 .nav-container{
     color: #F1F2EB;
     position: fixed;
     background-color: #005332!important;
+    z-index: 1200;
 }
 
 
@@ -55,9 +52,68 @@ background-position: center center;
 }
 
 #map {
-    height: 95vh;
+    height: 93.5vh;
     width: 100%;
+    margin: 3px;
 }
+
+#menu{
+    z-index: 1100;
+    /* background-color: #005332; */
+    width: fit-content;
+    position: absolute;
+    bottom: -580px;
+    left: 10px;
+}
+
+.h4{
+    margin-top: 1em;
+    margin-left: 0.5em;
+    color: #F1F2EB;
+}
+
+/* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
+.location-item {
+    padding: 2em 2em 0em 2em;
+    margin-left: 1.5em;
+    position: relative;
+    color: #272D2D;
+    border-left: 3px solid #007EA7;
+}
+
+/* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
+.location-item::before {
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 0px;
+    margin: 0;
+}
+
+/* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
+.location-item::after {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 2.4em;
+    left: -11px;
+    background-color: #F1F2EB;
+    border: 3px solid #007EA7;
+    border-radius: 10px;
+    content: '';
+}
+
+/* Overrides Bootstrap margin */
+h5{ 
+    margin-bottom: 0;
+    color: #007EA7;
+    text-shadow: 0 0 #000000;
+}
+
 
 /* ********************************************************* SECTION THREE - Text View */
 
@@ -98,3 +154,26 @@ background-position: center center;
 
 
 /* ********************************************************* MEDIA QUERIES */
+
+/* https://www.w3schools.com/howto/howto_js_sidenav.asp & https://www.w3schools.com/howto/howto_css_timeline.asp */
+@media (max-width: 991px){
+    #locations {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1100;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(183, 153, 13, 0.9);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+}
+
+@media (min-width: 992px){
+    #menu {
+        display: none;
+    }
+}
