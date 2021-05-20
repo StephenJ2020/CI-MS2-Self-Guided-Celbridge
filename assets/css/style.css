@@ -66,37 +66,13 @@ background-position: center center;
     left: 10px;
 }
 
-.start h4{
-    width: fit-content;
-    position: relative;
-    padding: 1em 1em 2em 1em;
-    color: #272D2D;
+.h4{
+    margin-top: 1em;
+    margin-left: 0.5em;
+    color: #F1F2EB;
 }
 
-.start h4::before {
-    position: absolute;
-    left: 2.5em;
-    top: 3em;
-    display: block;
-    font-weight: 600;
-    font-size: 0.8em;
-    padding: 0px;
-    margin: 0;
-}
-
-/*.start h4::after {
-    width: 20px;
-    height: 20px;
-    display: block;
-    position: absolute;
-    top: 2.4em;
-    left: -11px;
-    background-color: #F1F2EB;
-    border: 3px solid #007EA7;
-    border-radius: 10px;
-    content: '';
-}*/
-
+/* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
 .location-item {
     padding: 2em 2em 0em 2em;
     margin-left: 1.5em;
@@ -105,6 +81,7 @@ background-position: center center;
     border-left: 3px solid #007EA7;
 }
 
+/* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
 .location-item::before {
     position: absolute;
     left: 2.5em;
@@ -116,10 +93,11 @@ background-position: center center;
     margin: 0;
 }
 
+/* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
 .location-item::after {
     width: 20px;
     height: 20px;
-    /*display: block;*/
+    display: block;
     position: absolute;
     top: 2.4em;
     left: -11px;
@@ -129,9 +107,13 @@ background-position: center center;
     content: '';
 }
 
-h5{
+/* Overrides Bootstrap margin */
+h5{ 
     margin-bottom: 0;
+    color: #007EA7;
+    text-shadow: 0 0 #000000;
 }
+
 
 /* ********************************************************* SECTION THREE - Text View */
 
@@ -173,7 +155,8 @@ h5{
 
 /* ********************************************************* MEDIA QUERIES */
 
-@media (max-width: 991px) {
+/* https://www.w3schools.com/howto/howto_js_sidenav.asp & https://www.w3schools.com/howto/howto_css_timeline.asp */
+@media (max-width: 991px){
     #locations {
         height: 100%;
         width: 0;
@@ -189,7 +172,7 @@ h5{
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px){
     #menu {
         display: none;
     }

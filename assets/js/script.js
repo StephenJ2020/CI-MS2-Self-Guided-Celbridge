@@ -315,10 +315,11 @@ map.locate({
      setView: true
 });
 
-let startHeader = document.getElementById("start");
-startHeader.innerHTML = `<h4>START</h4>`;
+//let startHeader = document.getElementById("start");
+//startHeader.innerHTML = `<h4>START</h4>`;
 
 // Place markers
+locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
 locations.forEach(location => {
     let marker = L.marker([location.lat, location.lng]).addTo(map);
     marker.bindPopup(`<div class="location-item"><h5>${location.name}</h5>
@@ -328,6 +329,7 @@ locations.forEach(location => {
     <p>${location.descriptionThree}</p>
     <p>${location.descriptionFour}</p>
     </div>`);
+    
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
 });
 
