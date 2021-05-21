@@ -1,5 +1,18 @@
 /* jshint esversion: 6 */
 
+const home = document.getElementById("home");
+const mapView = document.getElementById("mapView");
+const textView = document.getElementById("textView");
+const contactUs = document.getElementById("contactUs");
+
+window.onload = home;
+function showHide(id){
+
+}
+
+
+
+
 // variable = Array of objects with details of each map location https://www.w3schools.com/js/js_objects.asp
 const locations = [
     {
@@ -329,9 +342,29 @@ locations.forEach(location => {
     <p>${location.descriptionThree}</p>
     <p>${location.descriptionFour}</p>
     </div>`);
-    
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
+    //locationsDiv.innerHTML = `<h4 class="h4">END</h4>`;
 });
+
+/******************************************************************************************* */
+
+marker = new L.MarkerClusterGroup();
+
+    for (var i = 0; i < addressPoints.length; i++) {
+        var a = addressPoints[i];
+        var title = a[2];
+        var marker = L.marker(new L.LatLng(a[0], a[1]), {
+            icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+            title: title
+        });
+        marker.bindPopup(title);
+        markers.addLayer(marker);
+    }
+
+    map.addLayer(markers);
+
+/****************************************************************************************** */
+
 
 // Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
 let menu = document.getElementById("menu");
