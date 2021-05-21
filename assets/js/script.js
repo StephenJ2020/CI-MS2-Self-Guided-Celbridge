@@ -1,18 +1,5 @@
 /* jshint esversion: 6 */
 
-const home = document.getElementById("home");
-const mapView = document.getElementById("mapView");
-const textView = document.getElementById("textView");
-const contactUs = document.getElementById("contactUs");
-
-window.onload = home;
-function showHide(id){
-
-}
-
-
-
-
 // variable = Array of objects with details of each map location https://www.w3schools.com/js/js_objects.asp
 const locations = [
     {
