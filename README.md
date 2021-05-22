@@ -158,7 +158,8 @@ For my Side Navbar to slide out over the map it needs a z-index higher than the 
 But to deal with the change in the height of the main navbar on different mobile devices I want the side navbar to sit under the main navbar so that there is no gap between the two on certain mobile devices.  
 Therefore I have given the main navbar a z-index of 1200 to achieve this.  
 
-  
+Timeline:  
+The timeline feature on the side navbar has been tricky to style correctly and I haven't yet styled it for Desktop view.  However I've now noticed that the timeline is appearing on the Map Marker pop-up as I've used the same array and function to populate the Map Markers and the Side Nabvbar.  
 
 # TESTING      
   
