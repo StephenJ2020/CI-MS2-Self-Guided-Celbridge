@@ -315,9 +315,6 @@ map.locate({
      setView: true
 });
 
-//let startHeader = document.getElementById("start");
-//startHeader.innerHTML = `<h4>START</h4>`;
-
 // Place markers
 locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
 locations.forEach(location => {
@@ -332,6 +329,22 @@ locations.forEach(location => {
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
     //locationsDiv.innerHTML = `<h4 class="h4">END</h4>`;
 });
+
+
+
+
+// Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+let menu = document.getElementById("menu");
+menu.addEventListener("click", function (e) {
+    e.stopPropagation();
+    locationsDiv.style.width = "70vw";
+});
+
+
+window.addEventListener("click", function () {
+    locationsDiv.style.width = "0";
+});
+
 
 /******************************************************************************************* */
 
@@ -351,18 +364,3 @@ marker = new L.MarkerClusterGroup();
     map.addLayer(markers);
 
 /****************************************************************************************** */
-
-
-// Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
-let menu = document.getElementById("menu");
-menu.addEventListener("click", function (e) {
-    e.stopPropagation();
-    locationsDiv.style.width = "70vw";
-});
-
-
-window.addEventListener("click", function () {
-    locationsDiv.style.width = "0";
-});
-
-
