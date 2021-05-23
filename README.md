@@ -161,6 +161,15 @@ Therefore I have given the main navbar a z-index of 1200 to achieve this.
 Timeline:  
 The timeline feature on the side navbar has been tricky to style correctly and I haven't yet styled it for Desktop view.  However I've now noticed that the timeline is appearing on the Map Marker pop-up as I've used the same array and function to populate the Map Markers and the Side Nabvbar.  
 
+Hide / Show Sections:  
+I used the following resources to help me understand how to hide / show each section.  
+ * [W3C jQuery Selectors](https://www.w3schools.com/jquery/jquery_selectors.asp)  
+ * [W3C jQuery Effects - Hide and Show](https://www.w3schools.com/jquery/jquery_hide_show.asp)  
+ * [Pretty Printed](https://www.youtube.com/watch?v=WhU38HV-Iu8) youtube tutorial - The jQuery Hide, Show, and Toggle Functions.  
+  
+Carousel Overlay:  
+I have used a code snippet from [Bootsnipp](https://bootsnipp.com/snippets/rv1xd) and I've adapted the code to suit my requirements.    
+
 # TESTING      
   
     
