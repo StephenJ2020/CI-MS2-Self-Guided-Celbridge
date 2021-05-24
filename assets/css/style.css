@@ -41,6 +41,51 @@ background-size: cover;
 background-position: center center;
 }
 
+/* https://bootsnipp.com/snippets/rv1xd */
+.overlay--anchor {
+    /*height: 16vh;
+    position: relative;*/
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #F1F2EB;
+    text-align: center;
+    /*text-transform: uppercase;*/
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+/* https://bootsnipp.com/snippets/rv1xd */
+.overlay {
+    /*position: absolute;
+    top: -24px;
+    left: -1px;
+    display: block;
+    background-color: rgba(52, 52, 52, 0.4);
+    border-radius: 15px;*/
+
+    /*width: 100vw;
+    height: fit-content;
+    margin: 0 auto;
+    border-radius: 11px;
+    background-color: rgba(52, 52, 52, 0.6);
+    display: inline-block;*/
+
+    position: relative;
+    width: 90%;
+    height: 35%;
+    top: 60vh;
+    left: 5vw;
+    z-index: 100;
+    background-color: #080d15;
+    opacity: .7;
+}
+
 
 /* ********************************************************* SECTION TWO <main> - Map View - Leaftlet JS */
 
@@ -55,7 +100,7 @@ div.style {
 
 #sideNav-locations-container{
     max-height: 95vh !important;
-    /*overflow: scroll;*/
+    margin-top: 5vh;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #f7fa3885;
@@ -74,8 +119,7 @@ div.style {
 
 #menu{
     z-index: 1100;
-    position: fixed;
-    top: 570px;
+    bottom: 10px;
     left: 10px;
 }
 
