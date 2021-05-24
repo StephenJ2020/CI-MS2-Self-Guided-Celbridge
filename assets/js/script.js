@@ -330,9 +330,6 @@ locations.forEach(location => {
     //locationsDiv.innerHTML = `<h4 class="h4">END</h4>`;
 });
 
-
-
-
 // Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
 let menu = document.getElementById("menu");
 menu.addEventListener("click", function (e) {
@@ -340,10 +337,38 @@ menu.addEventListener("click", function (e) {
     locationsDiv.style.width = "70vw";
 });
 
-
 window.addEventListener("click", function () {
     locationsDiv.style.width = "0";
 });
+
+
+var legend = L.control({position: "bottomleft"});
+
+legend.onAdd = function(map) {
+    var div = L.DomUtil.create("div", "legend");
+    div.innerHTML = 
+        '<p><b>Simple shapes in Leaflet</b></p><hr>' +
+        '<p>This map shows an example of adding shapes ' + 
+        'on a Leaflet map</p>' +
+        'The following shapes were added:<br>' +
+        '<p><ul>' +
+        '<li>A marker</li>' +
+        '<li>A line</li>' +
+        '<li>A polygon</li>' +
+        '</ul></p>' +
+        'The line layer has a <b>popup</b>. ' + 
+        'Click on the line to see it!<hr>' +
+        'Created with the Leaflet library<br>' +
+        '<img src="images/leaflet.png">';
+    return div;
+};
+
+// links from side navbar to map markers
+
+//locations.forEach(location => {
+    //let linkToMarker = L.marker([location.lat, location.lng]).bindPopup();
+//});
+
 
 
 /******************************************************************************************* */
