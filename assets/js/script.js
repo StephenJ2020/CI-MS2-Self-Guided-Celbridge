@@ -296,7 +296,8 @@ const locations = [
 ];
 
 // Leaflet JS Map
-const locationsDiv = document.getElementById("locations");    
+const locationsDiv = document.getElementById("locations");  
+const sideNav = document.getElementById("menu");  
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
     attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank' rel='noopener'>© Mapbox</a>"
@@ -306,7 +307,7 @@ let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/til
 let map = L.map("map", {
     layers: [tiles],
     center: [53.34, -6.54],
-    zoom: 15
+    zoom: 16
 });
 
 // User's live location on mobile devices
@@ -326,10 +327,10 @@ locations.forEach(location => {
     <p>${location.descriptionThree}</p>
     <p>${location.descriptionFour}</p>
     </div>`);
+    
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
-    //locationsDiv.innerHTML = `<h4 class="h4">END</h4>`;
+    
 });
-
 
 
 
@@ -337,30 +338,11 @@ locations.forEach(location => {
 let menu = document.getElementById("menu");
 menu.addEventListener("click", function (e) {
     e.stopPropagation();
-    locationsDiv.style.width = "70vw";
+    sideNav.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
+    sideNav.style.width = "60vw";
 });
-
 
 window.addEventListener("click", function () {
-    locationsDiv.style.width = "0";
+    sideNav.style.width = "0";
 });
 
-
-/******************************************************************************************* */
-
-marker = new L.MarkerClusterGroup();
-
-    for (var i = 0; i < addressPoints.length; i++) {
-        var a = addressPoints[i];
-        var title = a[2];
-        var marker = L.marker(new L.LatLng(a[0], a[1]), {
-            icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
-            title: title
-        });
-        marker.bindPopup(title);
-        markers.addLayer(marker);
-    }
-
-    map.addLayer(markers);
-
-/****************************************************************************************** */

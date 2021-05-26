@@ -168,7 +168,11 @@ I used the following resources to help me understand how to hide / show each sec
  * [Pretty Printed](https://www.youtube.com/watch?v=WhU38HV-Iu8) youtube tutorial - The jQuery Hide, Show, and Toggle Functions.  
   
 Carousel Overlay:  
-I have used a code snippet from [Bootsnipp](https://bootsnipp.com/snippets/rv1xd) and I've adapted the code to suit my requirements.    
+I have used a code snippet from [Bootsnipp](https://bootsnipp.com/snippets/rv1xd) and I've adapted the code to suit my requirements.  
+
+On-going issue with 'menu' icon for side navbar:  
+A post I made on Slack requesting help in the [#interactive-frontend](https://code-institute-room.slack.com/archives/C7HD37Q1F/p1621948997135100) channel.  
+
 
 # TESTING      
   

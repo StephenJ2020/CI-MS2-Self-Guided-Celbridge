@@ -32,5 +32,19 @@ $(document).ready(function(){
         $('#textSection').hide();
     });
 
+    $('#castletown').click(function(){
+        $('#mapSection').show();
+        $('#homeSection').hide();
+        $('#textSection').hide();
+        $('#contactSection').hide();
+    });
+
+    $('#abbey').click(function(){
+        $('#mapSection').show();
+        $('#homeSection').hide();
+        $('#textSection').hide();
+        $('#contactSection').hide();
+    });
+
 });
 
