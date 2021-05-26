@@ -65,7 +65,7 @@
                     <img src="./assets/images/s1-conolly-folly-default.png" class="d-md-none w-100 h-100" alt="Conolly's Folly, part of the 18th Century designed landscape of Castletown House">
                     <img src="./assets/images/s1-conolly-folly.png" class="d.none d-md-block w-100 h-100" alt="Conolly's Folly, part of the 18th Century designed landscape of Castletown House">
                     </div>
-                    <div class="overlay">
+                    <div class="container-fluid overlay">
                         <h1>Welcome to Self-Guided Celbridge!</h1>
                         <p>Use our quick start options below to select your preferred starting point for this self-guided walking tour of historic Celbridge.</p>
                         <a href="#mapSection" id="castletown" class="btn btn-success">Castletown house</a>
@@ -84,14 +84,16 @@
         </div>
     </section>
     <main  id="mapSection"> <!-- Leaftlet JS Map -->
-        <div class="container-fluid map-container">
-            <div class="row"> 
-                <div id="sideNav-locations-container" class="col-8  col-lg-3">  <!-- Map Locations Menu -->
-                    <div id="menu"><i class="fas fa-bars"></i></div>
+        <div class=" map-container">
+            <div class="row g-0 mb-0"> 
+                <div id="sideNav-locations-container" class="d-none d-lg-block col-8  col-lg-4 col-xxl-3">  <!-- Map Locations Menu -->
+                    <div class="d-lg-none" id="menu-div"></i></div>
                     <div id="locations"></div>
+                    <div id="end" class="h4"><h4>End of Tour</h4></div>
                 </div>
-                <div id="map-container" class="col-12 col-lg-9 px-0">  <!-- The Map col-lg-9  -->
+                <div id="map-div" class="col-12 col-lg-8 col-xxl-9 px-0">  <!-- The Map col-lg-9  -->
                     <div id="map"></div>
+                    <div class="d-lg-none" id="menu"><i class="side-nav-menu fas fa-bars fa-3x"></i></div>
                 </div>
             </div>
         </div>
