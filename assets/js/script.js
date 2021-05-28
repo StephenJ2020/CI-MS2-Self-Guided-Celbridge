@@ -297,7 +297,7 @@ const locations = [
 
 // Leaflet JS Map
 const locationsDiv = document.getElementById("locations");  
-const sideNav = document.getElementById("menu");  
+//const menuDiv = document.getElementById("menu-div");  
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
     attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank' rel='noopener'>© Mapbox</a>"
@@ -306,8 +306,8 @@ let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/til
 // Center Map & set zoom level
 let map = L.map("map", {
     layers: [tiles],
-    center: [53.34, -6.54],
-    zoom: 16
+    center: [53.34600, -6.53300], 
+    zoom: 15
 });
 
 // User's live location on mobile devices
@@ -329,20 +329,17 @@ locations.forEach(location => {
     </div>`);
     
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
-    
 });
 
 
-
-// Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+// sidenav : https://www.w3schools.com/howto/howto_js_sidenav.asp
 let menu = document.getElementById("menu");
 menu.addEventListener("click", function (e) {
     e.stopPropagation();
-    sideNav.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
-    sideNav.style.width = "60vw";
+    locationsDiv.style.width = "75vw";
 });
 
 window.addEventListener("click", function () {
-    sideNav.style.width = "0";
+    locationsDiv.style.width = "0";
 });
 
