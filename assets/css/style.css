@@ -71,7 +71,7 @@ div.style {
     max-height: 100vh;
 }
 
-#sideNav-locations-container{
+/*#sideNav-locations-container{
     max-height: 99.5vh !important;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -79,7 +79,7 @@ div.style {
     font-weight: 800;
     padding-top: 50px;
     padding-bottom: 50px;
-}
+}*/
 
 #map {
     height: 99.5vh;
@@ -108,20 +108,45 @@ div.style {
 
 #menu{
     z-index: 1100;
-    bottom: 10px;
+    /*bottom: 10px;
     left: 190px;
-    display: inline-block;
+    display: inline-block;*/
 }
 
 .side-nav-menu{
-    width: 35px;
+    /*width: 35px;
     position: fixed;
     z-index: 1100;
     bottom: 20px;
     left: 20px;
     overflow-x: hidden;
     transition: 0.5s;
+    padding-top: 60px;*/
+
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1100;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
     padding-top: 60px;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 65vw;
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  background-color: #f7fa3885;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .h4{
@@ -129,6 +154,20 @@ div.style {
     margin-left: 0.5em;
     color: #00789f;
 }
+
+/*#locations {
+    max-height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1100;
+    bottom: 0;
+    left: 0;
+    background-color: #f7fa3885;
+    overflow-y: scroll;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    transition: 0.5s;
+}*/
 
 /* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
 .location-item {
@@ -221,7 +260,7 @@ h5{
 /* ********************************************************* MEDIA QUERIES */
 
 /* https://www.w3schools.com/howto/howto_js_sidenav.asp & https://www.w3schools.com/howto/howto_css_timeline.asp */
-@media (max-width: 991px){
+/*@media (max-width: 991px){
     #locations {
         max-height: 100vh;
         width: 0;
@@ -229,19 +268,15 @@ h5{
         z-index: 1100;
         bottom: 0;
         left: 0;
-        /*background-color: #f7fa3885;*/
-        background-color: #000000;
+        background-color: #f7fa3885;
         overflow-y: scroll;
         padding-top: 60px;
         padding-bottom: 70px;
         transition: 0.5s;
-
-        /*overflow-x: hidden;
-        background-color: rgba(183, 153, 13, 0.9);*/
     }
-}
+}*/
 
-@media (min-width: 992px){
+/*@media (min-width: 992px){
     #menu {
         display: none;
     }
@@ -249,8 +284,25 @@ h5{
         margin-bottom: 20px;
         margin-left: 200px;
     }
-    /*.leaflet-control-attribution a {
+    .leaflet-control-attribution a {
         text-decoration: none;
         margin-bottom: 100px;
-    }*/
+    }
+}*/
+@media (max-width: 991px){
+    .sidenav{
+        width: 65vw;
+    }
+}
+
+@media (min-width: 992px){
+    .sidenav{
+        width: 33.5vw;
+    }
+}
+
+@media (min-width: 1400px){
+    .sidenav{
+        width: 25vw;
+    }
 }

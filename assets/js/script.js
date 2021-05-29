@@ -296,7 +296,8 @@ const locations = [
 ];
 
 // Leaflet JS Map
-const locationsDiv = document.getElementById("locations");  
+//const locationsDiv = document.getElementsByClassName("locations");  
+const locationsDiv = document.getElementById("locations"); 
 //const menuDiv = document.getElementById("menu-div");  
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
@@ -329,6 +330,7 @@ locations.forEach(location => {
     </div>`);
     
     locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
+    locationsDiv.style.width = "65vw";
 });
 
 
@@ -336,10 +338,9 @@ locations.forEach(location => {
 let menu = document.getElementById("menu");
 menu.addEventListener("click", function (e) {
     e.stopPropagation();
-    locationsDiv.style.width = "75vw";
+    locationsDiv.style.width = "65vw";
 });
 
 window.addEventListener("click", function () {
     locationsDiv.style.width = "0";
 });
-
