@@ -183,6 +183,7 @@ h5{
     margin-bottom: 0;
     color: #00789f;
     text-shadow: 0 0 #000000;
+    min-inline-size: fit-content;
 }
 
 /* Override Bootstrap or Leaflet! ????? */  /*  Not sure if this is still required - double check!!!! */
@@ -191,6 +192,13 @@ h5{
    flex-wrap: inherit !important;
 }*/
 
+.toggle-hide{
+    display: none;
+}
+
+.toggle-show{
+    display: block;
+}
 
 /* ********************************************************* SECTION THREE - Text View */
 
@@ -272,10 +280,23 @@ h5{
     .sidenav{
         width: 33.5vw;
     }
+    /* https://www.sitepoint.com/community/t/hide-and-show-div-on-page-load/2500 */
+    .toggle-hide{
+        display: block;
+    }
 }
 
 @media (min-width: 1400px){
     .sidenav{
         width: 25vw;
     }
+}
+
+@media (min-width: 431px){
+    h5{ 
+    margin-bottom: 0;
+    color: #00789f;
+    text-shadow: 0 0 #000000;
+    min-inline-size: max-content;
+}
 }

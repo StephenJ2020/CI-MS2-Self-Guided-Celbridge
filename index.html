@@ -69,7 +69,7 @@
                         <h1>Welcome to Self-Guided Celbridge!</h1>
                         <p>Use our quick start options below to select your preferred starting point for this self-guided walking tour of historic Celbridge.</p>
                         <a href="#mapSection" id="castletown" class="btn btn-success">Castletown house</a>
-                        <a href="#mapSection" id="abbey" class="btn btn-success">Celbridge Abbey</a>
+                        <a href="#mapSection" id="abbey" class="btn btn-success" onclick="reverseStart();">Celbridge Abbey</a>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
@@ -86,8 +86,8 @@
     <main  id="mapSection"> <!-- Leaftlet JS Map -->
         <div class="map-container">
             <div class="row g-0 mb-0"> 
-                <div class="d-none d-md-block col-8  col-lg-4 col-xxl-3">  <!-- Map Locations Menu -->
-                    <div class="sidenav">
+                <div class="col-8  col-lg-4 col-xxl-3">  <!-- Map Locations Menu -->
+                    <div id="toggle-menu" class="sidenav toggle-hide">
                         <div id="locations"></div>
                         <div id="end" class="h4"><h4>End of Tour</h4></div>
                     </div>

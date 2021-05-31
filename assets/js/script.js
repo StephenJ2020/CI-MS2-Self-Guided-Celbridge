@@ -334,13 +334,27 @@ locations.forEach(location => {
 });
 
 
-// sidenav : https://www.w3schools.com/howto/howto_js_sidenav.asp
-let menu = document.getElementById("menu");
-menu.addEventListener("click", function (e) {
-    e.stopPropagation();
-    locationsDiv.style.width = "65vw";
-});
+// Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+// https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/
 
-window.addEventListener("click", function () {
-    locationsDiv.style.width = "0";
-});
+let menu = document.querySelector('#menu');
+let menuToggler = document.querySelector('#toggle-menu');
+
+menu.addEventListener('click', ()=>{
+  menuToggler.classList.toggle('toggle-show');
+})
+
+
+
+
+
+function reverseStart() {
+    //var locationsReversed = [...locations].reverse();  
+    let locationsReversed = locations.slice().reverse();
+
+    locationsDiv.innerHTML += locationsReversed;
+    //document.getElementById("locations").innerHTML += locationsReversed;
+    //document.getElementById("locations").innerHTML += `<div class="location-item"><h5>${locationsReversed.name}</h5></div>`;
+    //locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
+}
+
