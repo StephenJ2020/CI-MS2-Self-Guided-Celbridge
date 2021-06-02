@@ -296,9 +296,8 @@ const locations = [
 ];
 
 // Leaflet JS Map
-//const locationsDiv = document.getElementsByClassName("locations");  
 const locationsDiv = document.getElementById("locations"); 
-//const menuDiv = document.getElementById("menu-div");  
+//const locationsDivReversed = document.getElementById("locations"); 
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
     attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank' rel='noopener'>© Mapbox</a>"
@@ -317,11 +316,11 @@ map.locate({
      setView: true
 });
 
-// Place markers
+// Markers Pins and Locations names for Side Navbar
 locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
 locations.forEach(location => {
     let marker = L.marker([location.lat, location.lng]).addTo(map);
-    marker.bindPopup(`<div class="location-item"><h5>${location.name}</h5>
+    marker.bindPopup(`<div><h5>${location.name}</h5>
     <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
     <p>${location.descriptionOne}</p>
     <p>${location.descriptionTwo}</p>
@@ -334,27 +333,36 @@ locations.forEach(location => {
 });
 
 
-// Side Navbar: https://www.w3schools.com/howto/howto_js_sidenav.asp
+// Toggle Side Navbar
+// https://www.w3schools.com/howto/howto_js_sidenav.asp
 // https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/
-
 let menu = document.querySelector('#menu');
 let menuToggler = document.querySelector('#toggle-menu');
 
-menu.addEventListener('click', ()=>{
+menu.addEventListener('click', function (e) {
+  e.stopPropagation();
   menuToggler.classList.toggle('toggle-show');
+  console.log("Toggle Button Clicked");
 })
+    
 
 
 
+let abbey = document.querySelector('#abbey');
 
+abbey.addEventListener('click', ()=> {
+       locations.forEach(location => {
+            let marker = L.marker([location.lat, location.lng]).addTo(map);
+            marker.bindPopup(`<div><h5>${location.name}</h5>  
+            <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+            <p>${location.descriptionOne}</p>
+            <p>${location.descriptionTwo}</p>
+            <p>${location.descriptionThree}</p>
+            <p>${location.descriptionFour}</p>
+            </div>`);
+            console.log("Start at Celbridge Abbey was Clicked");
 
-function reverseStart() {
-    //var locationsReversed = [...locations].reverse();  
-    let locationsReversed = locations.slice().reverse();
-
-    locationsDiv.innerHTML += locationsReversed;
-    //document.getElementById("locations").innerHTML += locationsReversed;
-    //document.getElementById("locations").innerHTML += `<div class="location-item"><h5>${locationsReversed.name}</h5></div>`;
-    //locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
-}
-
+            locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
+            locationsDiv.style.width = "65vw";
+        });
+});

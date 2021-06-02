@@ -194,10 +194,12 @@ h5{
 
 .toggle-hide{
     display: none;
+    transition: 0.5s;
 }
 
 .toggle-show{
     display: block;
+    transition: 0.5s;
 }
 
 /* ********************************************************* SECTION THREE - Text View */
