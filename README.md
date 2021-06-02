@@ -172,6 +172,12 @@ I have used a code snippet from [Bootsnipp](https://bootsnipp.com/snippets/rv1xd
 
 On-going issue with 'menu' icon for side navbar:  
 A post I made on Slack requesting help in the [#interactive-frontend](https://code-institute-room.slack.com/archives/C7HD37Q1F/p1621948997135100) channel.  
+[W3C sidenav](https://www.w3schools.com/howto/howto_js_sidenav.asp)  
+[W3C toggle class](https://www.w3schools.com/howto/howto_js_toggle_class.asp)  
+Channel-Lead video by [Eamonn](https://code-institute-room.slack.com/files/UU5GBNS6M/F01B8T8UETU/ifd_call_23_sep_2010.mp4?origin_team=T0L30B202&origin_channel=D01PGS56LPJ)   
+[W3C event ontoggle](https://www.w3schools.com/jsref/event_ontoggle.asp)  
+Web Dev Simplified [Event Listeners](https://www.youtube.com/watch?v=XF1_MlZ5l6M)  
+Adapted code from [Free Code Camp](https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/)  
 
 
 # TESTING      

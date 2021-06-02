@@ -64,35 +64,37 @@ background-position: center center;
 
 .map-container{
     height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    width: 100%;
 }
 
-/*div.style {
+div.style {
     max-height: 100vh;
-}*/
+}
 
-#sideNav-locations-container{
+/*#sideNav-locations-container{
     max-height: 99.5vh !important;
-    /*margin-top: 5vh;
-    overflow-y: scroll;*/
+    overflow-y: scroll;
     overflow-x: hidden;
     background-color: #f7fa3885;
     font-weight: 800;
     padding-top: 50px;
     padding-bottom: 50px;
-}
+}*/
 
 #map {
     height: 99.5vh;
     width: 100%;
-    /*margin-top: 1vh;*/
 }
 
-#map-div{
+/*#map-div{   //leave out for time being !!!!!
     height: 96.5vh;
-    width: 100vw;
-}
+    width: 100%;
+    /*overflow-x: hidden;*
+    background-color: #f7fa3885;
+    font-weight: 800;
+    /*padding-top: 50px;
+    padding-bottom: 50px;*
+}*/
 
 /* Add margin to Leaflet zoom control container */
 .leaflet-top, .leaflet-bottom {
@@ -108,7 +110,6 @@ background-position: center center;
     z-index: 1100;
     bottom: 10px;
     left: 190px;
-    display: inline-block;
 }
 
 .side-nav-menu{
@@ -118,8 +119,20 @@ background-position: center center;
     bottom: 20px;
     left: 20px;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 65vw;
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  background-color: #f7fa3885;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
 .h4{
@@ -127,6 +140,7 @@ background-position: center center;
     margin-left: 0.5em;
     color: #00789f;
 }
+
 
 /* https://www.w3schools.com/howto/howto_css_timeline.asp & https://stephenj2020.github.io/Resume/resume.html */
 .location-item {
@@ -169,14 +183,24 @@ h5{
     margin-bottom: 0;
     color: #00789f;
     text-shadow: 0 0 #000000;
+    min-inline-size: fit-content;
 }
 
-/* Override Bootstrap or Leaflet! ????? */
-.map-container .row {
+/* Override Bootstrap or Leaflet! ????? */  /*  Not sure if this is still required - double check!!!! */
+/*.map-container .row {
    display: flex !important;
    flex-wrap: inherit !important;
+}*/
+
+.toggle-hide{
+    display: none;
+    transition: 0.5s;
 }
 
+.toggle-show{
+    display: block;
+    transition: 0.5s;
+}
 
 /* ********************************************************* SECTION THREE - Text View */
 
@@ -214,13 +238,12 @@ h5{
     margin-right: 5%;
 }
 
-/* git push !!!!!*/
 
 
 /* ********************************************************* MEDIA QUERIES */
 
 /* https://www.w3schools.com/howto/howto_js_sidenav.asp & https://www.w3schools.com/howto/howto_css_timeline.asp */
-@media (max-width: 991px){
+/*@media (max-width: 991px){
     #locations {
         max-height: 100vh;
         width: 0;
@@ -233,13 +256,10 @@ h5{
         padding-top: 60px;
         padding-bottom: 70px;
         transition: 0.5s;
-
-        /*overflow-x: hidden;
-        background-color: rgba(183, 153, 13, 0.9);*/
     }
-}
+}*/
 
-@media (min-width: 992px){
+/*@media (min-width: 992px){
     #menu {
         display: none;
     }
@@ -249,6 +269,36 @@ h5{
     }
     .leaflet-control-attribution a {
         text-decoration: none;
-        margin-right: 15vw;
+        margin-bottom: 100px;
     }
+}*/
+@media (max-width: 991px){
+    .sidenav{
+        width: 65vw;
+    }
+}
+
+@media (min-width: 992px){
+    .sidenav{
+        width: 33.5vw;
+    }
+    /* https://www.sitepoint.com/community/t/hide-and-show-div-on-page-load/2500 */
+    .toggle-hide{
+        display: block;
+    }
+}
+
+@media (min-width: 1400px){
+    .sidenav{
+        width: 25vw;
+    }
+}
+
+@media (min-width: 431px){
+    h5{ 
+    margin-bottom: 0;
+    color: #00789f;
+    text-shadow: 0 0 #000000;
+    min-inline-size: max-content;
+}
 }
