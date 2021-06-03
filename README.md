@@ -179,6 +179,8 @@ Channel-Lead video by [Eamonn](https://code-institute-room.slack.com/files/UU5GB
 Web Dev Simplified [Event Listeners](https://www.youtube.com/watch?v=XF1_MlZ5l6M)  
 Adapted code from [Free Code Camp](https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/)  
 
+Links from Side Navar to Mrker pins:  
+Leaflet.js crash course with practical project | Open-source interactive maps 🔥 in Hindi by [Coder's Gyan](https://www.youtube.com/watch?v=LWML4HkOAi0)
 
 # TESTING      
   

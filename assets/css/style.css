@@ -186,12 +186,6 @@ h5{
     min-inline-size: fit-content;
 }
 
-/* Override Bootstrap or Leaflet! ????? */  /*  Not sure if this is still required - double check!!!! */
-/*.map-container .row {
-   display: flex !important;
-   flex-wrap: inherit !important;
-}*/
-
 .toggle-hide{
     display: none;
     transition: 0.5s;
@@ -201,6 +195,32 @@ h5{
     display: block;
     transition: 0.5s;
 }
+
+/*.leaflet-popup-content-wrapper{
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.leaflet-popup-content{
+    margin: 0;
+    max-width: 350px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.leaflet-popup-content h5{
+    background-color: #005332;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    color: #f1f2ea;
+    text-align: center;
+}*/
+
 
 /* ********************************************************* SECTION THREE - Text View */
 
