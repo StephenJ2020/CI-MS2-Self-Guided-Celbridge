@@ -371,12 +371,17 @@ locations.forEach(location => {
     const a = document.getElementById("link");
 
     a.addEventListener('click', () => {
-        map.flyTo([location.lat, location.lng], 18,);
-        duration: 3
+        map.flyTo([location.lat, location.lng], 18, {
+            duration: 2
+        });
+
+        L.popup({closeButton: false}).setLatLng([location.lat, location.lng], )
+        .openOn(map);
+
+
     });
 
-    L.popup({closeButton: false}).setLatLng([location.lat, location.lng])
-    .openOn(map);
+    
 
 });
 
