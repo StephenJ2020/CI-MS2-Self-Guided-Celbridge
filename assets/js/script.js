@@ -345,6 +345,14 @@ map.locate({
      setView: true
 });
 
+L.control.scale({
+    position: 'bottomright'
+}).addTo(map);
+
+//map.on('click', function(ev) {
+//    alert(ev.latlng); // ev is an event object (MouseEvent in this case)
+//});
+
 // Markers Pins and Locations names for Side Navbar
 locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
 locations.forEach(location => {
@@ -355,11 +363,23 @@ locations.forEach(location => {
     <p>${location.descriptionTwo}</p>
     <p>${location.descriptionThree}</p>
     <p>${location.descriptionFour}</p>
-    </div>`);
+    </div>`, {closeButton: false});
     
-    locationsDiv.innerHTML += `<div class="location-item"><a href="${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
+    locationsDiv.innerHTML += `<div class="location-item"><a id="link" href="#${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
     locationsDiv.style.width = "65vw";
+
+    const a = document.getElementById("link");
+
+    a.addEventListener('click', () => {
+        map.flyTo([location.lat, location.lng], 18,);
+        duration: 3
+    });
+
+    L.popup({closeButton: false}).setLatLng([location.lat, location.lng])
+    .openOn(map);
+
 });
+
 
 
 // Toggle Side Navbar
@@ -381,14 +401,7 @@ let abbey = document.querySelector('#abbey');
 
 abbey.addEventListener('click', ()=> {
        locations.forEach(location => {
-            let marker = L.marker([location.lat, location.lng]).addTo(map);
-            marker.bindPopup(`<div><h5>${location.name}</h5>  
-            <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
-            <p>${location.descriptionOne}</p>
-            <p>${location.descriptionTwo}</p>
-            <p>${location.descriptionThree}</p>
-            <p>${location.descriptionFour}</p>
-            </div>`);
+            
             console.log("Start at Celbridge Abbey was Clicked");
 
             locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
