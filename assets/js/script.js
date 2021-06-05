@@ -29,7 +29,7 @@ const locations = [
         name: "St. Wolstan's Abbey 1202",
         lat: "53.347119",
         lng: "-6.518830",
-        image: "./assets/images/s2-st-woltans.png",
+        image: "./assets/images/s2-st-wolstans.png",
         descriptionOne: "On the other side of the riverbank there are lovely views of the remains of St. Wolstan’s Abbey and a nineteenth-century tower, designed to be seen from Castletown. The Abbey was founded in 1202 and was closed by Henry VIII in1536.",
         descriptionTwo: "",
         descriptionThree: "",
@@ -326,7 +326,7 @@ const locations = [
 
 // Leaflet JS Map
 const locationsDiv = document.getElementById("locations"); 
-//const locationsDivReversed = document.getElementById("locations"); 
+const locationsDivReversed = document.getElementById("locations"); 
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
     attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank' rel='noopener'>© Mapbox</a>"
@@ -340,10 +340,10 @@ let map = L.map("map", {
 });
 
 // User's live location on mobile devices
-map.locate({
-     watch: true,
-     setView: true
-});
+//map.locate({
+//     watch: true,
+//     setView: true
+//});
 
 L.control.scale({
     position: 'bottomright'
@@ -353,21 +353,32 @@ L.control.scale({
 //    alert(ev.latlng); // ev is an event object (MouseEvent in this case)
 //});
 
-// Markers Pins and Locations names for Side Navbar
-locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
+// Locations names for Side Navbar
+/*locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
 locations.forEach(location => {
-    let marker = L.marker([location.lat, location.lng]).addTo(map);
-    marker.bindPopup(`<div id="${location.locId}"><h5>${location.name}</h5>
+    /*let marker = L.marker([location.lat, location.lng, location.locId]).addTo(map);
+    marker.bindPopup(`<span id="${location.locId}"><div id="${location.locId}"><h5>${location.name}</h5>
     <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
     <p>${location.descriptionOne}</p>
     <p>${location.descriptionTwo}</p>
     <p>${location.descriptionThree}</p>
     <p>${location.descriptionFour}</p>
-    </div>`, {closeButton: false});
+    </div></span>`, {closeButton: false}).openPopup(marker = L.marker([location.lat, location.lng]));*/
     
-    locationsDiv.innerHTML += `<div class="location-item"><a id="link" href="#${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
+    /*locationsDiv.innerHTML += `<div class="location-item"><a class="link" href="#${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
     locationsDiv.style.width = "65vw";
 
+    // Markers Pins 
+    let marker = L.marker([location.lat, location.lng, location.locId]).addTo(map);
+    marker.bindPopup(`<span id="${location.locId}"><div id="${location.locId}"><h5>${location.name}</h5>
+    <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+    <p>${location.descriptionOne}</p>
+    <p>${location.descriptionTwo}</p>
+    <p>${location.descriptionThree}</p>
+    <p>${location.descriptionFour}</p>
+    </div></span>`, {closeButton: false});  // .openPopup(marker = L.marker([location.lat, location.lng]))
+
+    // FlyTo()
     const a = document.getElementById("link");
 
     a.addEventListener('click', () => {
@@ -381,9 +392,69 @@ locations.forEach(location => {
 
     });
 
+});*/
+
+// Markers Pins and Locations names for Side Navbar
+locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
+locations.forEach(location => {
+
+    // creates links for side navbar
+    locationsDiv.innerHTML += `<div class="location-item"><a id="link" href="#${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
+    locationsDiv.style.width = "65vw";
+
+    // Adds 30 marker pins to the map
+    let marker = L.marker([location.lat, location.lng]).addTo(map);
+
+    // Creates the content for the popup for each map marker pin
+    marker.bindPopup(`<div id="${location.locId}"><h5>${location.name}</h5>
+    <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+    <p>${location.descriptionOne}</p>
+    <p>${location.descriptionTwo}</p>
+    <p>${location.descriptionThree}</p>
+    <p>${location.descriptionFour}</p>
+    </div>`, {closeButton: false});
+    
+    // // Experimental code for links from side navbar to marker pins // //
+
+    // suggested code from: //
+
+    /*
+    // Create and save a reference to each marker
+    markers[person.id] = L.marker(person.latLng, {...}).addTo(map);
+
+    // Add the ID
+    markers[person.id]._icon.id = person.id;
+     */
+
+     // one of my attempts to add this code to my site //
+    /*marker[location.locId] = L.marker([location.lat, location.lng], {...}).addTo(map);
+    // Add the ID
+    marker[location.locId]._icon.id = location.locId;*/
+
+    const a = document.getElementById("link");
+
+    a.addEventListener('click', () => {
+        map.flyTo([location.lat, location.lng], 18, {
+            duration: 2
+        });
+
+        L.popup({closeButton: false, offset: L.point(0, -28)}).setLatLng([location.lat, location.lng], )
+        .setContent(`<div id="${location.locId}"><h5>${location.name}</h5>
+        <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+        <p>${location.descriptionOne}</p>
+        <p>${location.descriptionTwo}</p>
+        <p>${location.descriptionThree}</p>
+        <p>${location.descriptionFour}</p>
+        </div>`)
+        .openOn(map);
+
+
+    });
+
     
 
 });
+
 
 
 
@@ -397,19 +468,98 @@ menu.addEventListener('click', function (e) {
   e.stopPropagation();
   menuToggler.classList.toggle('toggle-show');
   console.log("Toggle Button Clicked");
-})
-    
+});
 
 
 
-let abbey = document.querySelector('#abbey');
+
+
+
+    /*marker.bindPopup(`<span id="${location.locId}"><div id="${location.locId}"><h5>${location.name}</h5>
+    <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+    <p>${location.descriptionOne}</p>
+    <p>${location.descriptionTwo}</p>
+    <p>${location.descriptionThree}</p>
+    <p>${location.descriptionFour}</p>
+    </div></span>`, {closeButton: false}).openPopup(marker = L.marker([location.lat, location.lng]));*/
+
+    /*let a = document.getElementsByClassName("link");    
+    a.addEventListener('click', () => {*/
+           /*map.flyTo([location.lat, location.lng], 18, {
+            duration: 2
+        });
+
+        marker.popup({closeButton: false})
+        .setLatLng([location.lat, location.lng], )
+        .setContent(`<div id="${location.locId}"><h5>${location.name}</h5>
+        <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+        <p>${location.descriptionOne}</p>
+        <p>${location.descriptionTwo}</p>
+        <p>${location.descriptionThree}</p>
+        <p>${location.descriptionFour}</p>
+        </div>`)
+        .openOn(map);
+
+        const a = document.getElementById("link");
+
+        a.addEventListener('click', () => {
+        map.flyTo([location.lat, location.lng], 18, {
+            duration: 2
+        });
+
+        L.popup({closeButton: false}).setLatLng([location.lat, location.lng], )
+        .openOn(map);
+
+    });
+});    */
+
+// Markers Pin content 
+/*locations.forEach(location => {
+let a = document.getElementsByClassName("link");    
+    a.addEventListener('click', () => {
+           map.flyTo([location.lat, location.lng], 18, {
+            duration: 2
+        });
+
+        marker.popup({closeButton: false}).setLatLng([location.lat, location.lng], )
+        .openOn(map);
+
+    });
+
+
+    /******************************************************************* 
+    let marker = L.marker([location.lat, location.lng, location.locId]).addTo(map);
+    marker._icon.id = location.locId;
+    ********************************************************************** 
+
+    markers[person.id] = L.marker(person.latLng, {...}).addTo(map);
+    make it:
+    let markers[location.locId] = L.marker([location.lat, location.lng, location.locId]).addTo(map);
+    markers[location.locId]._icon.id = location.locId;
+
+    const a = document.getElementsByClass("link");
+
+    a.addEventListener('click', () => {
+           map.flyTo([location.lat, location.lng], 18, {
+            duration: 2
+        });
+
+        marker.popup({closeButton: false}).setLatLng([location.lat, location.lng], )
+        .openOn(map);
+
+    });
+
+});*/
+
+
+/*let abbey = document.querySelector('#abbey');
 
 abbey.addEventListener('click', ()=> {
-       locations.forEach(location => {
-            
-            console.log("Start at Celbridge Abbey was Clicked");
+       locations.name.forEach(location.name => {
+            let locationsReversed = [...location.name].reverse();
+            locationsDivReversed.innerHTML += `<div class="location-item"><h5>${locationsReversed.name}</h5></div>`;
+            locationsDivReversed.style.width = "65vw";
 
-            locationsDiv.innerHTML += `<div class="location-item"><h5>${location.name}</h5></div>`;
-            locationsDiv.style.width = "65vw";
+            console.log("Start at Celbridge Abbey was Clicked");
         });
-});
+});*/
