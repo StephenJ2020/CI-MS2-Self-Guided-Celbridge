@@ -328,7 +328,7 @@ const locations = [
 const locationsDiv = document.getElementById("locations"); 
 const locationsDivReversed = document.getElementById("locations"); 
 //const a = document.getElementsByTagName('h5');
-const a = document.querySelectorAll('a.link');
+const a = document.querySelectorAll('#locations, a');
 
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
@@ -397,16 +397,17 @@ function generateContent(){
         
         // // Experimental code for links from side navbar to marker pins // //
         
-        /*a.addEventListener('click', () => {
-            flyToLocations();
-        });*/
+        a.addEventListener('click', (e) => {
+            a = e.target = 'a';
+            flyToLocations(location);
+        });
 
     });
 }
 
 generateContent();
 
-/*function flyToLocations(){
+function flyToLocations(location){
     map.flyTo([location.lat, location.lng], 18, {
         duration: 2
     });
@@ -421,7 +422,7 @@ generateContent();
     <p>${location.descriptionFour}</p>
     </div>`)
     .openOn(map);
-}*/
+}
 
 
 // Toggle Side Navbar
