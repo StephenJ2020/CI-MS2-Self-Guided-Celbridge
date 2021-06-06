@@ -181,6 +181,17 @@ Adapted code from [Free Code Camp](https://www.freecodecamp.org/news/javascript-
 
 Links from Side Navar to Mrker pins:  
 Leaflet.js crash course with practical project | Open-source interactive maps 🔥 in Hindi by [Coder's Gyan](https://www.youtube.com/watch?v=LWML4HkOAi0)
+Github Repo of [Coder's Gyan](https://github.com/codersgyan/leaflet-store-locator/commit/8887820169d487c705a7cfb4d78d7b1be4df7e09)  
+Working project of [Coder's Gyan}(https://codersgyan.github.io/leaflet-store-locator/#)]  
+W3C [for-of loop](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)   
+Stack Overflow [Iterating a loop](https://stackoverflow.com/questions/7364150/find-object-by-id-in-an-array-of-javascript-objects/35398031#35398031)  
+MDN [querySelectors](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)  
+Stack Overflow [assign ID's to leaflet Map Markers](https://stackoverflow.com/questions/25683871/assign-id-to-marker-in-leaflet)  
+Stack Overflow [Link to Leaflet Map Marker](https://stackoverflow.com/questions/14656807/link-to-marker-in-leaflet-map-from-extern-a-tag)  
+Github Repo of Turbo87 [Leaflet Sidebar](https://github.com/Turbo87/leaflet-sidebar/blob/master/examples/listing-markers.html)  
+Stack Exchange [Leaflet Sidebar](https://gis.stackexchange.com/questions/340698/dynamic-map-sidebar-with-info-from-marker-upon-click)  
+
+
 
 # TESTING      
   

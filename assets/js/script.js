@@ -327,8 +327,6 @@ const locations = [
 // Leaflet JS Map
 const locationsDiv = document.getElementById("locations"); 
 const locationsDivReversed = document.getElementById("locations"); 
-//const a = document.getElementsByTagName('h5');
-const a = document.querySelectorAll('#locations, a');
 
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
@@ -346,41 +344,13 @@ L.control.scale({
     position: 'bottomright'
 }).addTo(map);
 
-
-// Locations names for Side Navbar
-/*locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
-locations.forEach(location => {
-    /*let marker = L.marker([location.lat, location.lng, location.locId]).addTo(map);
-    marker.bindPopup(`<span id="${location.locId}"><div id="${location.locId}"><h5>${location.name}</h5>
-    <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
-    <p>${location.descriptionOne}</p>
-    <p>${location.descriptionTwo}</p>
-    <p>${location.descriptionThree}</p>
-    <p>${location.descriptionFour}</p>
-    </div></span>`, {closeButton: false}).openPopup(marker = L.marker([location.lat, location.lng]));*/
-    
-    /*locationsDiv.innerHTML += `<div class="location-item"><a class="link" href="#${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
-    locationsDiv.style.width = "65vw";
-
-    // Markers Pins 
-    let marker = L.marker([location.lat, location.lng, location.locId]).addTo(map);
-    marker.bindPopup(`<span id="${location.locId}"><div id="${location.locId}"><h5>${location.name}</h5>
-    <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
-    <p>${location.descriptionOne}</p>
-    <p>${location.descriptionTwo}</p>
-    <p>${location.descriptionThree}</p>
-    <p>${location.descriptionFour}</p>
-    </div></span>`, {closeButton: false});  // .openPopup(marker = L.marker([location.lat, location.lng]))
-
-});*/
-
 // Markers Pins and Locations names for Side Navbar
 function generateContent(){
     locationsDiv.innerHTML = `<h4 class="h4">START</h4>`;
     locations.forEach(location => {
 
         // creates links for side navbar
-        locationsDiv.innerHTML += `<div class="location-item"><a class="link" href="#${location.name}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
+        locationsDiv.innerHTML += `<div class="location-item"><a class="loc-anchor" href="#" data-id="${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
         locationsDiv.style.width = "65vw";
 
         // Adds 30 marker pins to the map
@@ -395,18 +365,24 @@ function generateContent(){
         <p>${location.descriptionFour}</p>
         </div>`, {closeButton: false});
         
-        // // Experimental code for links from side navbar to marker pins // //
-        
-        a.addEventListener('click', (e) => {
-            a = e.target = 'a';
-            flyToLocations(location);
-        });
-
     });
 }
 
 generateContent();
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+const linkTo = document.querySelectorAll(".loc-anchor");
+
+for (let link of linkTo){
+    link.addEventListener("click", function () {
+       let linkId = this.dataset.id;
+       let location = locations.find(location => location.locId === linkId);
+       flyToLocations(location);
+    })
+}
+
+// https://www.youtube.com/watch?v=LWML4HkOAi0
+// https://github.com/codersgyan/leaflet-store-locator/commit/8887820169d487c705a7cfb4d78d7b1be4df7e09
 function flyToLocations(location){
     map.flyTo([location.lat, location.lng], 18, {
         duration: 2
