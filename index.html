@@ -38,9 +38,9 @@
                     <li class="nav-item" id="mapView">
                     <a class="nav-link" href="#mapSection">Map View</a>
                     </li>
-                    <li class="nav-item" id="textView">
+                    <!--<li class="nav-item" id="textView">
                     <a class="nav-link" href="#textSection">Text View</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item" id="contactUs">
                     <a class="nav-link" href="#contactSection">Contact Us</a>
                     </li>
@@ -68,8 +68,8 @@
                     <div class="container-fluid overlay">
                         <h1>Welcome to Self-Guided Celbridge!</h1>
                         <p>Use our quick start options below to select your preferred starting point for this self-guided walking tour of historic Celbridge.</p>
-                        <a href="#mapSection" id="castletown" class="btn btn-success">Castletown house</a>
-                        <a href="#mapSection" id="abbey" class="btn btn-success">Celbridge Abbey</a>
+                        <a href="#mapSection" id="castletown" class="btn btn-my-green">Castletown House</a>
+                        <a href="#mapSection" id="abbey" class="btn btn-my-green">Celbridge Abbey</a>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
@@ -101,58 +101,15 @@
     </main>
     <section id="textSection"> <!-- Text Version of Tour details -->
         <div class="container-fluid text-container">
-            <div class="row"> <!-- Mobile Text View Container with one Location per screen-->
-                <div class="col-12 d-md-none mt-5 ms-3" style="background-color: aquamarine; height: 80vh; width: 90vw;"> 
-                    Mobile Text View
-                </div>
-            </div>
-            <div class="row"> <!-- Tablet Text View Container with four Locations per screen-->
-                <div class="offset-1 col-4 d-none d-md-block d-lg-none mt-5 mb-2" style="background-color: aquamarine; height: 40vh; width: 35vw;">  
-                    Tablet Text View - Row 1 col 1
-                </div>
-                <div class="offset-1 col-4 d-none d-md-block d-lg-none mt-5 mb-2" style="background-color: palevioletred; height: 40vh; width: 35vw;">  
-                    Tablet Text View - Row 1 col 2
-                </div>
-            </div>
-            <div class="row">
-                <div class="offset-1 col-4 d-none d-md-block d-lg-none mt-2 mb-5" style="background-color: palevioletred; height: 40vh; width: 35vw;">  
-                    <p>Tablet Text View - Row 2 col 1</p>
-                </div>
-                <div class="offset-1 col-4 d-none d-md-block d-lg-none mt-2 mb-5" style="background-color: aquamarine; height: 40vh; width: 35vw;">  
-                    Tablet Text View - Row 2 col 2
-                </div>
-            </div>
-
-            <div class="row"> <!-- Desktop Text View Container with six Locations per screen-->
-                <div class="col-4 d-none d-lg-block mt-5 mb-4 ms-5 me-1" style="background-color: aquamarine; height: 40vh; width: 30vw;">  
-                    Tablet Text View - Row 1 col 1
-                </div>
-                <div class="col-4 d-none d-lg-block mt-5 mb-4 mx-4" style="background-color: palevioletred; height: 40vh; width: 30vw;">  
-                    Tablet Text View - Row 1 col 2
-                </div>
-                <div class="col-4 d-none d-lg-block mt-5 mb-4 ms-1 me-5" style="background-color: aquamarine; height: 40vh; width: 30vw;">  
-                    Tablet Text View - Row 1 col 3
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4 d-none d-lg-block mt-4 mb-5 ms-5 me-1" style="background-color: palevioletred; height: 40vh; width: 30vw;">  
-                    Tablet Text View - Row 2 col 1
-                </div>
-                <div class="col-4 d-none d-lg-block mt-4 mb-5 mx-4" style="background-color: aquamarine; height: 40vh; width: 30vw;">  
-                    Tablet Text View - Row 2 col 2
-                </div>
-                <div class="col-4 d-none d-lg-block mt-4 ms-1 me-5" style="background-color: palevioletred; height: 40vh; width: 30vw;">  
-                    Tablet Text View - Row 2 col 3
-                </div>
-            </div>
+            <!-- Future Text Version of the Selft-Guided Walking Tour will be added in this section which is currently hidden from view-->
         </div>        
     </section>
     <section id="contactSection"> <!-- Contact Form -->
         <div class="container-fluid contact-container">
-            <div class="row">
+            <div class="row g-0 p-0 m-0">
                 <div class="col-12">
                     <div class="row" id="contact-image-container">
-                        <div class="col-12 d-lg-none">
+                        <div class="col-12 d-lg-none g-0 p-0 m-0">
                             <img src="./assets/images/s4-walking-tour-default.png" class="w-100 h-100" alt="A Guided Walking Tour through the parklands of Castletown House"> 
                         </div>
                         <div class="col-12 d-none d-lg-block">
@@ -161,38 +118,35 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <form class="row g-3 needs-validation" id="contact-form" novalidate>
-                                <div class="col-md-4 position-relative">
-                                    <label for="validationTooltip01" class="form-label">First name</label>
-                                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-                                    <div class="valid-tooltip">
-                                    Looks good!
+                            <form>
+                                <fieldset>
+                                    <legend class="ms-2">&nbsp; Your Details &nbsp;</legend>
+                                    <div class="form-check form-check-inline">
+                                        <label for="contactFirstName">First Name: </label>&nbsp;&nbsp;
+                                        <input type="text" id="contactFirstName" placeholder="First Name" name="contactFirstName" required>
                                     </div>
-                                </div>
-                                <div class="col-md-4 position-relative">
-                                    <label for="validationTooltip02" class="form-label">Last name</label>
-                                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-                                    <div class="valid-tooltip">
-                                    Looks good!
+                                    <div class="form-check form-check-inline">
+                                        <label for="contactLastName">Last Name: </label>&nbsp;&nbsp;
+                                        <input type="text" id="contactLastName" placeholder="Last Name" name="contactLastName" required>
                                     </div>
-                                </div>
-                                <div class="col-md-6 position-relative">
-                                    <label for="validationTooltip03" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="validationTooltip03" required>
-                                    <div class="invalid-tooltip">
-                                    Please provide a valid city.
+                                    <div class="form-check form-check-inline">
+                                        <label for="phone">Telephone: </label>&nbsp;&nbsp;
+                                        <input type="tel" id="phone" placeholder="Enter your Mobile" name="phone" required>
                                     </div>
-                                </div>
-                                <div class="col-md-3 position-relative">
-                                    <label for="validationTooltip05" class="form-label">Zip</label>
-                                    <input type="text" class="form-control" id="validationTooltip05" required>
-                                    <div class="invalid-tooltip">
-                                    Please provide a valid zip.
+                                    <div class="form-check form-check-inline">
+                                        <label for="email">Enter Email: </label>&nbsp;&nbsp;
+                                        <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary" type="submit">Submit form</button>
-                                </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend class="ms-2">&nbsp; Request Details &nbsp;</legend>
+                                    <div class="form-check form-check-inline col-12 justify-content-center">
+                                        <label for="mainFormTextarea1">Please enter your request here: </label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-12 justify-content-center">
+                                        <textarea class="form-control" id="mainFormTextarea1" rows="5" required></textarea>
+                                    </div>
+                                </fieldset>
                             </form>
                         </div>
                     </div>
