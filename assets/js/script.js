@@ -328,7 +328,10 @@ const locations = [
 const locationsDiv = document.getElementById("locations"); 
 const locationsDivReversed = document.getElementById("locations"); 
 //const a = document.getElementsByTagName('h5');
-const a = document.querySelectorAll('#locations, a');
+//const a = document.getElementsByClassName("loc-anchor");
+//const anchors = getElementsByClassName('loc-anchor');
+//const a = document.querySelectorAll(".loc-anchor");     (Goran)
+// 16:20 06jun
 
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
@@ -380,7 +383,7 @@ function generateContent(){
     locations.forEach(location => {
 
         // creates links for side navbar
-        locationsDiv.innerHTML += `<div class="location-item"><a class="link" href="#${location.name}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
+        locationsDiv.innerHTML += `<div class="location-item"><a class="loc-anchor" href="#" data-id="${location.locId}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
         locationsDiv.style.width = "65vw";
 
         // Adds 30 marker pins to the map
@@ -397,15 +400,55 @@ function generateContent(){
         
         // // Experimental code for links from side navbar to marker pins // //
         
-        a.addEventListener('click', (e) => {
-            a = e.target = 'a';
-            flyToLocations(location);
-        });
+        
 
     });
 }
 
 generateContent();
+
+const linkTo = document.querySelectorAll(".loc-anchor");
+
+for (let link of linkTo){
+    link.addEventListener("click", function () {
+       let linkId = this.dataset.id;
+       let location = locations.find(location => location.locId === linkId);
+       flyToLocations(location);
+    })
+}
+
+
+
+
+
+/*a.addEventListener('click', () => {
+    let selectedId = this.DataTransferItem.id;
+    let location = locations.find(loc => loc.locId === selectedId);
+    flyToLocations(location);
+})*/
+
+
+/*for (let i = 0, i < anchors.length; i++){
+    let anchorId += loc-anchor[i];
+    anchorId.addEventListener('click', () =>{
+        flyToLocations();
+    });
+});*/
+
+// https://www.w3schools.com/js/js_loop_for.asp
+/*var i;
+for (i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}*/
+
+// A suggestion by Goran
+/*anchors.forEach((a) => {
+    a.addEventListener('click',(e)=>{
+    generateContent();
+    });
+}*/
+
+
 
 function flyToLocations(location){
     map.flyTo([location.lat, location.lng], 18, {
