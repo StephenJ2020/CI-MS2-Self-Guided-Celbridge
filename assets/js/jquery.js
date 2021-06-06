@@ -19,7 +19,7 @@ $(document).ready(function(){
     });
 
     $('#textView').click(function(){
-        $('#textSection').show();
+        $('#textSection').hide();
         $('#homeSection').hide();
         $('#mapSection').hide();
         $('#contactSection').hide();

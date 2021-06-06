@@ -70,7 +70,7 @@ const locations = [
         locId: "locIdSix"
     },
     {
-        name: "Donaghcumper House and Demesne",
+        name: "Donaghcumper House & Demesne",
         lat: "53.343238",
         lng: "-6.535208",
         image: "./assets/images/s2-donaghcumper.png",
@@ -158,7 +158,7 @@ const locations = [
         locId: "locIdFourteen"
     },
     {
-        name: "Royal Irish Constabulary Barracks 1841",
+        name: "Royal Irish Constabulary Barracks",
         lat: "53.340835",
         lng: "-6.537745",
         image: "./assets/images/s2-ric.png",
@@ -327,7 +327,9 @@ const locations = [
 // Leaflet JS Map
 const locationsDiv = document.getElementById("locations"); 
 const locationsDivReversed = document.getElementById("locations"); 
-const a = document.getElementsByTagName('h5');
+//const a = document.getElementsByTagName('h5');
+const a = document.querySelectorAll('a.link');
+
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
     attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank' rel='noopener'>© Mapbox</a>"
@@ -378,7 +380,7 @@ function generateContent(){
     locations.forEach(location => {
 
         // creates links for side navbar
-        locationsDiv.innerHTML += `<div class="location-item"><a href="#${location.name}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
+        locationsDiv.innerHTML += `<div class="location-item"><a class="link" href="#${location.name}" alt="${location.name}"><h5>${location.name}</h5></a></div>`;
         locationsDiv.style.width = "65vw";
 
         // Adds 30 marker pins to the map
@@ -386,7 +388,7 @@ function generateContent(){
 
         // Creates the content for the popup for each map marker pin
         marker.bindPopup(`<div id="${location.locId}"><h5>${location.name}</h5>
-        <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+        <img class="imgPadding" src="${location.image}" alt="${location.alt}" width="290"><br>
         <p>${location.descriptionOne}</p>
         <p>${location.descriptionTwo}</p>
         <p>${location.descriptionThree}</p>
@@ -395,21 +397,22 @@ function generateContent(){
         
         // // Experimental code for links from side navbar to marker pins // //
         
-        a.addEventListener('click', () => {
-            flyToLocations(location);
-        });
+        /*a.addEventListener('click', () => {
+            flyToLocations();
+        });*/
 
     });
 }
 
 generateContent();
 
-function flyToLocations(){
+/*function flyToLocations(){
     map.flyTo([location.lat, location.lng], 18, {
         duration: 2
     });
 
-    L.popup({closeButton: false, offset: L.point(0, -28)}).setLatLng([location.lat, location.lng], )
+    L.popup({closeButton: false, offset: L.point(0, -28)})
+    .setLatLng([location.lat, location.lng])
     .setContent(`<div id="${location.locId}"><h5>${location.name}</h5>
     <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
     <p>${location.descriptionOne}</p>
@@ -418,7 +421,7 @@ function flyToLocations(){
     <p>${location.descriptionFour}</p>
     </div>`)
     .openOn(map);
-});
+}*/
 
 
 // Toggle Side Navbar
