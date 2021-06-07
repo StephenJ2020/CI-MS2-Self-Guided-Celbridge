@@ -326,8 +326,6 @@ const locations = [
 
 // Leaflet JS Map
 const locationsDiv = document.getElementById("locations"); 
-const locationsDivReversed = document.getElementById("locations"); 
-
 
 let tiles = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3RlcGhlbmoyMDIwIiwiYSI6ImNrb205bW5rdTAxZ2sycHAxemxmYXNueXYifQ.1U76DFHWDIDTD-liiMaC-g", {
     attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank' rel='noopener'>© Mapbox</a>"
@@ -378,7 +376,7 @@ for (let link of linkTo){
        let linkId = this.dataset.id;
        let location = locations.find(location => location.locId === linkId);
        flyToLocations(location);
-    })
+    });
 }
 
 // https://www.youtube.com/watch?v=LWML4HkOAi0
@@ -391,7 +389,7 @@ function flyToLocations(location){
     L.popup({closeButton: false, offset: L.point(0, -28)})
     .setLatLng([location.lat, location.lng])
     .setContent(`<div id="${location.locId}"><h5>${location.name}</h5>
-    <img class="pinPadding" src="${location.image}" alt="${location.alt}"><br>
+    <img class="imgPadding" src="${location.image}" alt="${location.alt}"><br>
     <p>${location.descriptionOne}</p>
     <p>${location.descriptionTwo}</p>
     <p>${location.descriptionThree}</p>
@@ -415,48 +413,45 @@ menu.addEventListener('click', function (e) {
 
 
 
-let locationsReversed = [...locations].slice().reverse();
+const locationsReversed = [...locations].slice().reverse();
+const locationsDivReversed = document.getElementById("locations"); 
 
 function reverseStartLocation(){
     locationsDivReversed.innerHTML = `<h4 class="h4">START</h4>`;
     locationsReversed.forEach(locationReversed => {
         
         // creates links for side navbar with Celbridge Abbey as the starting location
-        locationsDivReversed.innerHTML += `<div class="location-item"><a class="loc-anchor" href="#" data-id="${locationReversed.locId}" alt="${locationReversed.name}"><h5>${locationReversed.name}</h5></a></div>`;
+        locationsDivReversed.innerHTML += `<div class="location-item"><a class="reversed-loc-anchor" href="#" data-id="${locationReversed.locId}" alt="${locationReversed.name}"><h5>${locationReversed.name}</h5></a></div>`;
         locationsDivReversed.style.width = "65vw";
-        
-        for (let abbeyLink of abbeyLinkTo){
-            abbeyLink.addEventListener("click", function () {
-            let abbeyLinkId = this.dataset.id;
-            let locationReversed = locationsReversed.find(locationReversed => locationReversed.locId === abbeyLinkId);
-                console.table(locationReversed);
-            })
-        }
-
-        flyToLocationsReversed(locationReversed);
-        
+        //console.table(locationsReversed);
+        //console.table(locationReversed);
     });
 
-}
 
-const abbeyLinkTo = document.querySelectorAll(".loc-anchor");
+    const abbeyLinkTo = document.querySelectorAll(".reversed-loc-anchor");
+    console.log(abbeyLinkTo); 
+    console.log(' Hello - abbeyLinkTo');
+    for (let abbeyLink of abbeyLinkTo){
+        abbeyLink.addEventListener("click", function () {
+        let abbeyLinkId = this.dataset.id;
+        let locationReversed = locationsReversed.find(locationReversed => locationReversed.locId === abbeyLinkId);
+        console.log(abbeyLinkId); 
+        console.log(' Hello - abbeyLinkId'); 
+        flyToLocationsReversed(locationReversed);
+            
+        });
+    }
+}
 
 function flyToLocationsReversed(locationReversed){
     map.flyTo([locationReversed.lat, locationReversed.lng], 18, {
         duration: 2
     });
 
-    for (let abbeyLink of abbeyLinkTo){
-        abbeyLink.addEventListener("click", function () {
-        let abbeyLinkId = this.dataset.id;
-        let locationReversed = locationsReversed.find(locationReversed => locationReversed.locId === abbeyLinkId);
-        })
-    }
-
     L.popup({closeButton: false, offset: L.point(0, -28)})
     .setLatLng([locationReversed.lat, locationReversed.lng])
     .setContent(`<div id="${locationReversed.locId}"><h5>${locationReversed.name}</h5>
-    <img class="pinPadding" src="${locationReversed.image}" alt="${locationReversed.alt}"><br>
+    <img class="imgPadding" src="${locationReversed.image}" alt="${locationReversed.alt}"><br>
     <p>${locationReversed.descriptionOne}</p>
     <p>${locationReversed.descriptionTwo}</p>
     <p>${locationReversed.descriptionThree}</p>
