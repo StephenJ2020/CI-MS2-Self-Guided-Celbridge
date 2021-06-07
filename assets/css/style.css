@@ -290,11 +290,16 @@ fieldset{   /* Sets Font-size, text colour and border colour and margin of Field
     font-size: 1rem;
     margin: 20px 25px 20px 25px;
     padding: 20px 10px;
+    background-color: #f1f2ea;
 }
 
 legend{   /* Ensures the border-top of legend is displayed correctly */
-    width: fit-content;
-    text-align: left;
+    float: none;
+    width: auto;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: calc(1.275rem + .3vw);
+    line-height: inherit;
 } 
 
 fieldset p{

@@ -195,6 +195,33 @@ Stack Exchange [Leaflet Sidebar](https://gis.stackexchange.com/questions/340698/
 
 # TESTING      
   
+ * HTML Validation:  
+  
+  My html has no error!  
+  It does have three warnings:  
+  * Warning: Consider avoiding viewport values that prevent users from resizing documents.  
+    From line 6, column 1; to line 6, column 107  
+    =1.0">-->↩<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">↩<meta  
+  * Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.  
+    From line 102, column 5; to line 102, column 30  
+    main>↩    <section id="textSection"> <!--  
+  * Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.  
+    From line 107, column 5; to line 107, column 33  
+    tion>↩    <section id="contactSection"> <!--  
+
+The first warning is actual to do with a setting that is reccommended when using [Leaflet.js](https://leafletjs.com/examples/mobile/) on mobile devices so I'm choosing to keep this as it is.    
+The second warning is noted but I don't feel there is an appropriate place to add a heading in this section.  
+The third warding was noted and I ..........................  
+
+Bugs
+
+Had an issue were the `locationsReversed` array was updating the oder of options in the side navbar on the map section but the links were not working.  I spent an hour going through the code myself and comparing it to the code used to create the links using my `locations` array for the default starting order and I console.log the array in Dev Tools but i couldn't find the issue.  I then contacted Tutor support and spoke with Miklos who was great, he spent another hour and half stepping through the code with me again and suggesting a few additional console.logs that I could add to help with the troubleshooting and eventually we found that the issue was my second for-of-loop needed to be within the reverseStartLocation() function, which made sense as it only gets called if the user clicks on the `Celbridge Abbey` button on the Landing/Home screen.  
+Please see the following screenshots for more detail on this issue and the steps i took to identify and fix it.  
+[Screenshot 1](./assets/images/rm-testing-array-locationsReversed-consolelog1.png) - As you can see originally my second for-of-loop was outside of the reverseStartLocation() function.  
+[Screenshot 2](./assets/images/rm-testing-array-locationsReversed-consolelog2.png) - This shows that my console log of the `abbeyLinkTo` array on line 438 was empty and this is why my links were not working as they weren't get the locId from class `".reversed-loc-anchor"`.  
+[Screenshot 3](./assets/images/rm-testing-array-locationsReversed-consolelog3.png) - This shows that once I moved the second for-of-loop inside the reverseStartLocation() function that it was then getting the `locId`'s via the `abbeyLinkTo` array.  
+
+
     
 # Deployment  
 
@@ -209,7 +236,7 @@ This project was deployed to GitHub Pages following these steps:
 7. Select /(root) in the tab that is next to Branch selector     
 8. Click Save and page will automatically refresh
 9. You will now see a link to the deployed website   
-10. To view the deployed website [click here!](https://stephenj2020.github.io/CI-MS1-IrishSpiritTours/index.html)  
+10. To view the deployed website [click here!](https://stephenj2020.github.io/CI-MS2-Self-Guided-Celbridge/)  
 
 ## Forking the GitHub Repository
 
