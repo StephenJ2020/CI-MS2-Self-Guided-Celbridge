@@ -414,14 +414,53 @@ menu.addEventListener('click', function (e) {
 });
 
 
-/*let abbey = document.querySelector('#abbey');
 
-abbey.addEventListener('click', ()=> {
-       locations.name.forEach(location.name => {
-            let locationsReversed = [...location.name].reverse();
-            locationsDivReversed.innerHTML += `<div class="location-item"><h5>${locationsReversed.name}</h5></div>`;
-            locationsDivReversed.style.width = "65vw";
+let locationsReversed = [...locations].slice().reverse();
 
-            console.log("Start at Celbridge Abbey was Clicked");
-        });
-});*/
+function reverseStartLocation(){
+    locationsDivReversed.innerHTML = `<h4 class="h4">START</h4>`;
+    locationsReversed.forEach(locationReversed => {
+        
+        // creates links for side navbar with Celbridge Abbey as the starting location
+        locationsDivReversed.innerHTML += `<div class="location-item"><a class="loc-anchor" href="#" data-id="${locationReversed.locId}" alt="${locationReversed.name}"><h5>${locationReversed.name}</h5></a></div>`;
+        locationsDivReversed.style.width = "65vw";
+        
+        for (let abbeyLink of abbeyLinkTo){
+            abbeyLink.addEventListener("click", function () {
+            let abbeyLinkId = this.dataset.id;
+            let locationReversed = locationsReversed.find(locationReversed => locationReversed.locId === abbeyLinkId);
+                console.table(locationReversed);
+            })
+        }
+
+        flyToLocationsReversed(locationReversed);
+        
+    });
+
+}
+
+const abbeyLinkTo = document.querySelectorAll(".loc-anchor");
+
+function flyToLocationsReversed(locationReversed){
+    map.flyTo([locationReversed.lat, locationReversed.lng], 18, {
+        duration: 2
+    });
+
+    for (let abbeyLink of abbeyLinkTo){
+        abbeyLink.addEventListener("click", function () {
+        let abbeyLinkId = this.dataset.id;
+        let locationReversed = locationsReversed.find(locationReversed => locationReversed.locId === abbeyLinkId);
+        })
+    }
+
+    L.popup({closeButton: false, offset: L.point(0, -28)})
+    .setLatLng([locationReversed.lat, locationReversed.lng])
+    .setContent(`<div id="${locationReversed.locId}"><h5>${locationReversed.name}</h5>
+    <img class="pinPadding" src="${locationReversed.image}" alt="${locationReversed.alt}"><br>
+    <p>${locationReversed.descriptionOne}</p>
+    <p>${locationReversed.descriptionTwo}</p>
+    <p>${locationReversed.descriptionThree}</p>
+    <p>${locationReversed.descriptionFour}</p>
+    </div>`)
+    .openOn(map);
+}
