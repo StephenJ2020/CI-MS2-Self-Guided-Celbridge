@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,15 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
 .btn-my-green{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     color: #F1F2EB;
     background-color: #005332;
     border-color: #005332;
@@ -17,6 +27,9 @@
 /* ********************************************************* HEADER - Navbar */
 
 .nav-container{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
     color: #F1F2EB;
     position: fixed;
     background-color: #005332!important;
@@ -67,6 +80,8 @@ background-position: center center;
     display: inline-block;
     border-radius: 11px;
     background-color: rgba(52, 52, 52, 0.6);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: #f1f2eb;
     text-align: center
 }
@@ -234,7 +249,7 @@ a{
 }
 
 
-/* ********************************************************* SECTION THREE - Text View */
+/*  SECTION THREE - Text View - be add in the next release of the site */
 
 .text-container{
     height: 100vh;
@@ -242,11 +257,10 @@ a{
 }
 
 
-
-/* ********************************************************* SECTION FOUR - Contact Form & Footer */
+/*  SECTION FOUR - Contact Form & Footer */
 
 .contact-container{
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     background-color: #f9fd72c9;
 }
@@ -271,6 +285,7 @@ a{
     height: 200px;
     width: 100vw;
     margin-top: 40px;
+    margin-bottom: 50px;
     background-repeat:no-repeat;
     background-size:cover;
     background-size: cover;
@@ -278,10 +293,10 @@ a{
 }
 
 #contact-form{
-    max-width: 72%;
-    margin-top: 25%;
-    margin-left: 5%;
-    margin-right: 5%;
+    max-width: 86%;
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 fieldset{   /* Sets Font-size, text colour and border colour and margin of Fieldset */
@@ -294,12 +309,12 @@ fieldset{   /* Sets Font-size, text colour and border colour and margin of Field
 }
 
 legend{   /* Ensures the border-top of legend is displayed correctly */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
     float: none;
     width: auto;
     padding: 0;
-    margin-bottom: .5rem;
-    font-size: calc(1.275rem + .3vw);
-    line-height: inherit;
 } 
 
 fieldset p{
@@ -311,40 +326,30 @@ form fieldset input{
     border-radius: 3px;
 }
 
+form fieldset input:hover{   
+    border: 2px solid #00789f;
+}
 
 
-/* ********************************************************* MEDIA QUERIES */
+footer{
+    text-align: center;
+    color: #F1F2EB;
+    background-color: #272D2D;
+    width: 100%;
+    min-height: 200px;
+}
 
-/* https://www.w3schools.com/howto/howto_js_sidenav.asp & https://www.w3schools.com/howto/howto_css_timeline.asp */
-/*@media (max-width: 991px){
-    #locations {
-        max-height: 100vh;
-        width: 0;
-        position: fixed;
-        z-index: 1100;
-        bottom: 0;
-        left: 0;
-        background-color: #f7fa3885;
-        overflow-y: scroll;
-        padding-top: 60px;
-        padding-bottom: 70px;
-        transition: 0.5s;
-    }
-}*/
+footer ul{
+    padding-left: 0;
+}
 
-/*@media (min-width: 992px){
-    #menu {
-        display: none;
-    }
-    .leaflet-container .leaflet-control-attribution, .leaflet-container .leaflet-control-scale {
-        margin-bottom: 20px;
-        margin-left: 200px;
-    }
-    .leaflet-control-attribution a {
-        text-decoration: none;
-        margin-bottom: 100px;
-    }
-}*/
+footer img{
+    border-radius: 4px;
+}
+
+
+/* MEDIA QUERIES */
+
 @media (max-width: 991px){
     .sidenav{
         width: 65vw;
