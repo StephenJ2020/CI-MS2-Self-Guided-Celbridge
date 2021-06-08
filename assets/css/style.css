@@ -16,11 +16,11 @@ body{
 
 .btn-my-green{
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     color: #F1F2EB;
     background-color: #005332;
     border-color: #005332;
-    margin: 0 10px;
+    margin: 10px 10px;
     border-radius: 7px;
 }
 
@@ -41,7 +41,7 @@ body{
     color: rgb(255 255 255 / 64%);
 }
 
-/* ********************************************************* SECTION ONE - Carousel */
+/*  SECTION ONE - Carousel */
 
 .hero-carousel{
     height: 100vh;
@@ -87,7 +87,7 @@ background-position: center center;
 }
 
 
-/* ********************************************************* SECTION TWO <main> - Map View - Leaftlet JS */
+/*  SECTION TWO <main> - Map View - Leaftlet JS */
 
 .map-container{
     height: 100vh;
@@ -292,6 +292,14 @@ a{
     background-position: center center;
 }
 
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #272D2D;
+    text-align: center;
+}
+
 #contact-form{
     max-width: 86%;
     margin-top: 5%;
@@ -330,6 +338,11 @@ form fieldset input:hover{
     border: 2px solid #00789f;
 }
 
+.form-button{
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 0em;
+}
 
 footer{
     text-align: center;
