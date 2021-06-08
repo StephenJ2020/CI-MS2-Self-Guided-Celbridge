@@ -12,12 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin="">
-
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
-   
+   crossorigin="">   
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.ico">
 <link rel="stylesheet" href="assets/css/style.css" type="text/css"> 
 <title>Self-Guided Celbridge</title>
@@ -26,7 +21,7 @@
     <header> <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-container"> <!-- Code Snippet adapted from https://getbootstrap.com/docs/5.0/components/navbar/ -->
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><i class="fas fa-shoe-prints"></i> Self-Guided Celbridge</a>
+                <a class="navbar-brand ms-2" href="index.html"><i class="fas fa-shoe-prints"></i> Self-Guided Celbridge</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -101,7 +96,7 @@
     </main>
     <section id="textSection"> <!-- Text Version of Tour details -->
         <div class="container-fluid text-container">
-            <!-- Future Text Version of the Selft-Guided Walking Tour will be added in this section which is currently hidden from view-->
+            <!-- Future Text Version of the Self-Guided Walking Tour will be added in this section which is currently hidden from view-->
         </div>        
     </section>
     <section id="contactSection"> <!-- Contact Form -->
@@ -109,36 +104,36 @@
             <div class="row g-0 p-0 m-0">
                 <div class="col-12">
                     <div class="row" id="contact-image-container">
-                        <div class="col-12 d-lg-none g-0 p-0 m-0">
+                        <div class="col-12 d-md-none g-0 p-0 m-0">
                             <img src="./assets/images/s4-walking-tour-default.png" class="w-100 h-100" alt="A Guided Walking Tour through the parklands of Castletown House"> 
-                        </div>
-                        <div class="col-12 d-none d-lg-block">
+                        </div> 
+                        <div class="col-12 d-none d-md-block pb-5">
                             <img src="./assets/images/s4-walking-tour.png" class="w-100 h-100" alt="A Guided Walking Tour through the parklands of Castletown House">
-                        </div>
+                        </div> 
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <form>
+                            <form id="contact-form">
                                 <fieldset>
                                     <legend class="ms-2">&nbsp; Your Details &nbsp;</legend> 
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check form-check-inline mb-2">
                                         <label for="contactFirstName">First Name: </label>&nbsp;&nbsp;
                                         <input type="text" id="contactFirstName" placeholder="First Name" name="contactFirstName" required>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check form-check-inline mb-2">
                                         <label for="contactLastName">Last Name: </label>&nbsp;&nbsp;
                                         <input type="text" id="contactLastName" placeholder="Last Name" name="contactLastName" required>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check form-check-inline mb-2">
                                         <label for="phone">Telephone: </label>&nbsp;&nbsp;
                                         <input type="tel" id="phone" placeholder="Enter your Mobile" name="phone" required>
                                     </div>
-                                    <div class="form-check form-check-inline">
+                                    <div class="form-check form-check-inline mb-2">
                                         <label for="email">Enter Email: </label>&nbsp;&nbsp;
                                         <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
                                     </div>
                                 </fieldset>
-                                <fieldset>
+                                <fieldset class="mb-5">
                                     <legend class="ms-2">&nbsp; Request Details &nbsp;</legend>
                                     <div class="form-check form-check-inline col-12 justify-content-center">
                                         <label for="mainFormTextarea1">Please enter your request here: </label>
@@ -153,8 +148,77 @@
                 </div>
             </div>
         </div>        
-        <footer> <!-- Social Media Links -->
-            
+        <footer class="py-5">            
+            <div class="row"> 
+                <div class="col-12 col-lg-6 justify-content-center"> 
+                    <p class="py-4 px-4">Listen to the Abarta Audio Guide which covers many of the historic sites that you will see on this Self-Guided Celbridge Walking Tour!</p>
+                    <ul class="py-4 px-2">
+                        <li class="list-inline-item p-2">
+                            <a href="https://podcasts.apple.com/ie/podcast/castletown-house-celbridge-audio-tour/id1466088257?i=1000512246307" target="_blank" title="Apple Podcasts" rel="noreferrer">
+                                <img src="./assets/images/s4-apple-podcasts.png"  alt="Listen to the Abarta Audio Guide on Apple Podcasts">
+                                <span class="sr-only">Listen to the Abarta Audio Guide on Apple Podcasts</span></i> 
+                            </a>
+                        </li>
+                        <li class="list-inline-item p-2">
+                            <a href="https://open.spotify.com/episode/3akQW4vtRWf0C4tzeOomav" target="_blank" title="Listen on Spotify" rel="noreferrer">
+                                <img src="./assets/images/s4-spotify.png" class="w-100 h-100" alt="Listen to the Abarta Audio Guide on Spotify">
+                                <span class="sr-only">Listen to the Abarta Audio Guide on Spotify</span></i> 
+                            </a>
+                        </li>
+                        <li class="list-inline-item p-2">
+                            <a href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuYWJhcnRhaGVyaXRhZ2UuaWUvZmVlZC9hYmFydGEtaGVyaXRhZ2UtYXVkaW8tZ3VpZGVzLw/episode/aHR0cHM6Ly93d3cuYWJhcnRhaGVyaXRhZ2UuaWUvP3A9MzI0NzM?sa=X&ved=0CAUQkfYCahcKEwjY4-CW2qvvAhUAAAAAHQAAAAAQCQ" target="_blank" title="Google Podcasts" rel="noreferrer">
+                                <img src="./assets/images/s4-google-podcasts.png" class="w-100 h-100" alt="Listen to the Abarta Audio Guide on Google Podcasts">
+                                <span class="sr-only">Listen to the Abarta Audio Guide on Google Podcasts</span></i> 
+                            </a>
+                        </li>
+                    </ul>                    
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 align-self-center">                    
+                    <p class="pb-4">Follow Us on Social Media</p><br>
+                    <ul class="pt-3 pb-2 px-2">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/" target="_blank" title="Facebook" rel="noreferrer">
+                                <i class="fab fa-facebook-square fa-4x" aria-hidden="true"><span class="sr-only">Facebook</span></i> 
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/" target="_blank" title="Instagram" rel="noreferrer">
+                                <i class="fab fa-instagram-square fa-4x" aria-hidden="true"><span class="sr-only">Instagram</span></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/?lang=en" target="_blank" title="Twitter" rel="noreferrer">
+                                <i class="fab fa-twitter-square fa-4x" aria-hidden="true"><span class="sr-only">Twitter</span></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/" target="_blank" title="Youtube" rel="noreferrer">
+                                <i class="fab fa-youtube-square fa-4x" aria-hidden="true"><span class="sr-only">Youtube</span></i>  
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 justify-content-center">
+                    <p class="pt-4">Transport Links & PDF Download of Tour</p><br>
+                    <ul class="pt-5 pb-2 px-2">
+                        <li class="list-inline-item">
+                            <a href="https://www.dublinbus.ie/Your-Journey1/Timetables/?searchtype=route&searchquery=67" target="_blank" title="Dublin Bus Timetable from Dublin to Celbridge" rel="noreferrer">
+                                <i class="fas fa-bus-alt fa-4x" aria-hidden="true"><span class="sr-only">Dublin Bus Timetable from Dublin to Celbridge</span></i> 
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.irishrail.ie/en-ie/" target="_blank" title="Irish Rail Timetable from Dublin to Celbridge" rel="noreferrer">
+                                <i class="fas fa-subway fa-4x" aria-hidden="true"><span class="sr-only">Irish Rail Timetable from Dublin to Celbridge</span></i> 
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="http://www.discovercelbridge.com/wp-content/uploads/2017/02/Discover-Celbridge-Walking-Guide.pdf" target="_blank" title="Printable PDF version of this Walking Tour" rel="noreferrer">
+                                <i class="fas fa-download fa-4x" aria-hidden="true"><span class="sr-only">Printable PDF version of this Walking Tour</span></i>
+                            </a>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
         </footer>
     </section>
 
