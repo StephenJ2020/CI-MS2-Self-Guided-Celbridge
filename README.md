@@ -1,7 +1,7 @@
 # ***[Self-Guided Celbridge](https://stephenj2020.github.io/CI-MS2-Self-Guided-Celbridge/)***  
 (Please note the site is still under construction but you are welcome to follow my progress!)
    
- ![Self-Guided Celbridge logo]()  
+ ![Self-Guided Celbridge](./assets/images/rm-mock-up.png)  
   
 # Project Description    
 **Code Institute: Interactive Frontend Development**   
@@ -113,14 +113,11 @@ A strong but earthy green, clean & crisp white and dark grey, with a medium blue
 - ![#F1F2EB](https://placehold.it/20/F1F2EB/F1F2EB) `#F1F2EB`    
 - ![#272D2D](https://placehold.it/20/272D2D/272D2D) `#272D2D`  
  
-    
-  
-    
-  
  
 # Technologies Used  
  
 ## Languages Used
+ 
  
 -  [HTML5](https://en.wikipedia.org/wiki/HTML5)
  
@@ -129,7 +126,15 @@ A strong but earthy green, clean & crisp white and dark grey, with a medium blue
 -  [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
   
   
-### Frameworks, Libraries & Programs Used
+## Frameworks, Libraries & Programs Used
+
+-  [jQuery](https://jquery.com/)  
+
+-  [Leaflet.js](https://leafletjs.com/)  
+
+-  [Font Awesome](https://fontawesome.com/)  
+  
+    
  
 #Development Issues:    
   
@@ -211,7 +216,14 @@ Stack Exchange [Leaflet Sidebar](https://gis.stackexchange.com/questions/340698/
 
 The first warning is actual to do with a setting that is reccommended when using [Leaflet.js](https://leafletjs.com/examples/mobile/) on mobile devices so I'm choosing to keep this as it is.    
 The second warning is noted but I don't feel there is an appropriate place to add a heading in this section.  
-The third warding was noted and I ..........................  
+The third warding was noted and I have added a h2 heading.  
+
+ * JShint:
+I have no errors and the only warning is that I have an undefined variable L but this is to do with the code used by Leaflet.js so there is nothing I can do about that.  
+
+ * Google Dev Tools Lighthouse Report:  
+The report has picked up that I have a large number of images and that the file sizes are very large and that this is affecting the performance slightly.  I have already passed the images through Tinypng.com to compress them.  In future updates I may need to source alternative images for my carousel that can be further compressed.  
+[Lighthouse Report Scores](./assets/images/rm-lighthouse.png)   
 
 Bugs
 
@@ -220,6 +232,23 @@ Please see the following screenshots for more detail on this issue and the steps
 [Screenshot 1](./assets/images/rm-testing-array-locationsReversed-consolelog1.png) - As you can see originally my second for-of-loop was outside of the reverseStartLocation() function.  
 [Screenshot 2](./assets/images/rm-testing-array-locationsReversed-consolelog2.png) - This shows that my console log of the `abbeyLinkTo` array on line 438 was empty and this is why my links were not working as they weren't get the locId from class `".reversed-loc-anchor"`.  
 [Screenshot 3](./assets/images/rm-testing-array-locationsReversed-consolelog3.png) - This shows that once I moved the second for-of-loop inside the reverseStartLocation() function that it was then getting the `locId`'s via the `abbeyLinkTo` array.  
+  
+    
+## User Story Testing  
+  
+- ### First Time Visitor Goals
+1. The main fixed Navbar has 3 button and the landing page has two quick start button.  In addition a side navbar has been created in the Map section so the user has the option to click the individual marker pins to open the popup or to click the name linked in the side navbar to view the information about each location on the tour.  
+2. This can easily be achieved with the two quick start buttons on the landing / homepage.  
+3. The Leaflet.js map in initially set to a zoom level of 15 which gives a clear overview of the entire route of the tour.  
+4. Each marker pin has a popup which contains all the information about that location.  
+5. I had mobile enabled the map but it kept refreshing to you current location and if you want to move the map to see the details of another location before you walk to that location it would jump back to your location within 7 seconds so it was very difficult for the use to navigate with the feature enabled. So I have disabled and removed this and will revisit it for the update of the site.  
+6. The Text Version of the site was more complexed than I first thought in terms of generating this from my object array so based on the advice of my Mentor I have removed this and will add it to a future update of the site.   
+7. A simple contact form has been provided, although I did not have time to implement Email.js for this current release but it will be enabled for the next release.  
+  
+- ### Returning & Frequent Visitor Goals  
+1. The Side navbar is ideal for selecting a particular location that you want to revist the details of.  
+2. Again the Contact form is perfect for this.  
+3. Social Media links are contained within the footer at the bottom of the Contact Us section.  
 
 
     
@@ -272,7 +301,7 @@ $ git clone https://github.com/StephenJ2020/CI-MS2-Self-Guided-Celbridge
 
 Favicon: Was created using a [Font Awesome Icon Converter](https://gauger.io/fonticon/) by Paul Ferrett which I found via [Stack Overflow](https://stackoverflow.com/questions/18156240/use-font-awesome-icon-as-favicon)
 
-##Images  
+## Images  
 Conolly's Folly is by - [Luke O'Faolain](https://www.google.com/maps/uv?pb=!1s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec!3m1!7e115!4s%2Fmaps%2Fplace%2Fconolly%27s%2Bfolly%2F%4053.3698169%2C-6.5604273%2C3a%2C75y%2C139.47h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sEDcDhACe9usFaBTLud5v6A*212e0*214m2*213m1*211s0x48677033a8bfa2ef%3A0xe84c8e5ad72af3ec%3Fsa%3DX!5sconolly%27s%20folly%20-%20Google%20Search!15sCgIgAQ&imagekey=!1e10!2sAF1QipO2TZ7AW4eKJulp-UsGIKzjdAgLgLHC68MBefP3&hl=en&sa=X&ved=2ahUKEwi0373_z8HwAhWiunEKHTWqD8oQpx8wInoECDQQCA)  
 Castletown Gate Lodge - [Dream Ireland](https://www.dreamireland.com/site/Round_House_at_Castletown_Celbridge.21589.html)  
 Castletown Round House - [Irish Landmark Trust](https://www.irishlandmark.com/property/castletown-round-house/)  
@@ -286,9 +315,12 @@ George Finey's House - [Google Maps Street view](https://www.google.ie/maps/plac
 St. Patrick's Church - [Google Maps Street view](https://www.google.ie/maps/place/MAXIMALL+PHONE+SHOP/@53.3385458,-6.539578,3a,75y,283.06h,121.33t/data=!3m6!1e1!3m4!1s8xjZxZ5h2sUtWQNo1SnxiA!2e0!7i16384!8i8192!4m12!1m6!3m5!1s0x486771a9b090abd5:0x2d63deb9e9b4da9c!2sComplete+Leisure+Supplies+Ltd,+Arctic+Spas+Ireland!8m2!3d53.3436111!4d-6.5394444!3m4!1s0x48677181349df4dd:0x33bb8b96a40d8cb1!8m2!3d53.3397646!4d-6.5387911?hl=en&authuser=0)  
 Gogarty's Shop - [Google Maps Street view](https://www.google.ie/maps/place/MAXIMALL+PHONE+SHOP/@53.3385458,-6.539578,3a,75y,283.06h,121.33t/data=!3m6!1e1!3m4!1s8xjZxZ5h2sUtWQNo1SnxiA!2e0!7i16384!8i8192!4m12!1m6!3m5!1s0x486771a9b090abd5:0x2d63deb9e9b4da9c!2sComplete+Leisure+Supplies+Ltd,+Arctic+Spas+Ireland!8m2!3d53.3436111!4d-6.5394444!3m4!1s0x48677181349df4dd:0x33bb8b96a40d8cb1!8m2!3d53.3397646!4d-6.5387911?hl=en&authuser=0)  
 The Mill - [Kildare.ie](https://kildare.ie/tourism/typedetails.asp?EventID=22222)  
+The rest of the images for the marker pins were sourced from [Discover Celbridge](http://www.discovercelbridge.com/wp-content/uploads/2017/02/Discover-Celbridge-Walking-Guide.pdf) PDF.  
+ 
+ 
+ 
+# Acknowledgements 
 
- 
- 
- 
- 
-# Acknowledgements  
+I would like to thank my Mentor Chris Quinn for his usual good advice and calm manor, he really steered me through this project and kept me focused on the functionality.  
+I wish to thank all the team at Code Institute, with a special thanks to Igor, Sheryl, Jo & Miklos in Tutor Support who all helped me with the issues faced in getting the links to the marker pins to work.  
+I also wish to thank everyone on the Slack Community for their support and encouragement, again with a special thanks to Goran Kuzma and Babu Patel.
