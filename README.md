@@ -1,5 +1,4 @@
 # ***[Self-Guided Celbridge](https://stephenj2020.github.io/CI-MS2-Self-Guided-Celbridge/)***  
-(Please note the site is still under construction but you are welcome to follow my progress!)
    
  ![Self-Guided Celbridge](./assets/images/rm-mock-up.png)  
   
@@ -107,17 +106,11 @@ With the help of [Colour Mind](http://colormind.io/) I choose the following colo
    
 A strong but earthy green, clean & crisp white and dark grey, with a medium blue and mustard for a pop of colour.
 
-- ![#005332](https://placehold.it/20/005332/005332) `#005332`  
-- ![#B7990D](https://placehold.it/20/B7990D/B7990D) `#B7990D`    
-- ![#007EA7](https://placehold.it/20/007EA7/007EA7) `#007EA7`    
-- ![#F1F2EB](https://placehold.it/20/F1F2EB/F1F2EB) `#F1F2EB`    
-- ![#272D2D](https://placehold.it/20/272D2D/272D2D) `#272D2D`  
- 
+ * Please note that due to the colour contrast ratio I had to alter the mustard colour to #f9fd72c9 and the blue to #00789f   
  
 # Technologies Used  
  
 ## Languages Used
- 
  
 -  [HTML5](https://en.wikipedia.org/wiki/HTML5)
  
@@ -128,11 +121,22 @@ A strong but earthy green, clean & crisp white and dark grey, with a medium blue
   
 ## Frameworks, Libraries & Programs Used
 
--  [jQuery](https://jquery.com/)  
-
--  [Leaflet.js](https://leafletjs.com/)  
-
--  [Font Awesome](https://fontawesome.com/)  
+- [jQuery](https://jquery.com/)  
+- [Leaflet.js](https://leafletjs.com/)  
+- [Font Awesome](https://fontawesome.com/) 
+- [Bootstrap 5](https://getbootstrap.com/docs/4.1/getting-started/introduction/) Bootstrap Grid was used for responsiveness as well as features such as Collapse, Carousel & Forms..
+- [Balsamiq](https://balsamiq.com) Balsamiq was used to create wireframes during the design process.
+- [Google Fonts](https://fonts.google.com) used for project fonts.
+- [Gitpod](https://gitpod.io) Gitpod was the IDE used to create the site and for version control.
+- [Github](https://github.com/) GitHub is used to store the projects code after being pushed from Gitpod.
+- [TinyPNG](https://tinypng.com/) used to compress image sizes.
+- Mozilla DevTools used for debugging and testing.
+- Google DevTools used for debugging and testing.
+- [W3Scool](https://www.w3schools.com/) used as a general source of information.
+- [Stackoverflow](https://stackoverflow.com/) used as one of my main sources of information.
+- [W3C Markup Validator](https://validator.w3.org/) Used to test HTML code validation.
+- [W3C CSS Validatior - Jigsaw](https://jigsaw.w3.org/css-validator/) Used to test CSS code validation.
+- [Am I Responsive](http://ami.responsivedesign.is/) used to create Mock-up images to represent the site's responsiveness.
   
     
  
