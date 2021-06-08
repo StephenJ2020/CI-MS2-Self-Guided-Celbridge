@@ -33,9 +33,6 @@
                     <li class="nav-item" id="mapView">
                     <a class="nav-link" href="#mapSection">Map View</a>
                     </li>
-                    <!--<li class="nav-item" id="textView">
-                    <a class="nav-link" href="#textSection">Text View</a>
-                    </li>-->
                     <li class="nav-item" id="contactUs">
                     <a class="nav-link" href="#contactSection">Contact Us</a>
                     </li>
@@ -113,6 +110,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
+                            <h2>Contact Us</h2>
                             <form id="contact-form">
                                 <fieldset>
                                     <legend class="ms-2">&nbsp; Your Details &nbsp;</legend> 
@@ -135,13 +133,18 @@
                                 </fieldset>
                                 <fieldset class="mb-5">
                                     <legend class="ms-2">&nbsp; Request Details &nbsp;</legend>
-                                    <div class="form-check form-check-inline col-12 justify-content-center">
+                                    <div class="form-check form-check-inline col-12 ">
                                         <label for="mainFormTextarea1">Please enter your request here: </label>
                                     </div>
                                     <div class="form-check form-check-inline col-12 justify-content-center">
-                                        <textarea class="form-control" id="mainFormTextarea1" rows="5" required></textarea>
+                                        <textarea class="form-control" id="mainFormTextarea1" name="request" rows="5" required></textarea>
                                     </div>
                                 </fieldset>
+                                <div class="row">
+                                    <div class="col-12 form-check form-check-inline form-button pb-5 mb-5"> 
+                                        <button type="submit" class="btn btn-my-green" >Submit Request</button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -156,19 +159,19 @@
                         <li class="list-inline-item p-2">
                             <a href="https://podcasts.apple.com/ie/podcast/castletown-house-celbridge-audio-tour/id1466088257?i=1000512246307" target="_blank" title="Apple Podcasts" rel="noreferrer">
                                 <img src="./assets/images/s4-apple-podcasts.png"  alt="Listen to the Abarta Audio Guide on Apple Podcasts">
-                                <span class="sr-only">Listen to the Abarta Audio Guide on Apple Podcasts</span></i> 
+                                <span class="sr-only">Listen to the Abarta Audio Guide on Apple Podcasts</span>
                             </a>
                         </li>
                         <li class="list-inline-item p-2">
                             <a href="https://open.spotify.com/episode/3akQW4vtRWf0C4tzeOomav" target="_blank" title="Listen on Spotify" rel="noreferrer">
                                 <img src="./assets/images/s4-spotify.png" class="w-100 h-100" alt="Listen to the Abarta Audio Guide on Spotify">
-                                <span class="sr-only">Listen to the Abarta Audio Guide on Spotify</span></i> 
+                                <span class="sr-only">Listen to the Abarta Audio Guide on Spotify</span>
                             </a>
                         </li>
                         <li class="list-inline-item p-2">
                             <a href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuYWJhcnRhaGVyaXRhZ2UuaWUvZmVlZC9hYmFydGEtaGVyaXRhZ2UtYXVkaW8tZ3VpZGVzLw/episode/aHR0cHM6Ly93d3cuYWJhcnRhaGVyaXRhZ2UuaWUvP3A9MzI0NzM?sa=X&ved=0CAUQkfYCahcKEwjY4-CW2qvvAhUAAAAAHQAAAAAQCQ" target="_blank" title="Google Podcasts" rel="noreferrer">
                                 <img src="./assets/images/s4-google-podcasts.png" class="w-100 h-100" alt="Listen to the Abarta Audio Guide on Google Podcasts">
-                                <span class="sr-only">Listen to the Abarta Audio Guide on Google Podcasts</span></i> 
+                                <span class="sr-only">Listen to the Abarta Audio Guide on Google Podcasts</span>
                             </a>
                         </li>
                     </ul>                    
@@ -235,8 +238,8 @@
     <!-- jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
-
     <script src="assets/js/script.js"></script>
     <script src="assets/js/jquery.js"></script>
+
 </body>
 </html>
